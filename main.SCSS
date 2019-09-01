@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'gagalin';
+    src: url('gagalin-regular-webfont.woff2') format('woff2'),
+         url('gagalin-regular-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'lifehack';
+    src: url('lifehack_medium-webfont.woff2') format('woff2'),
+         url('lifehack_medium-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ubuntu';
+    src: url('ubuntu-b-webfont.woff2') format('woff2'),
+         url('ubuntu-b-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ubuntu';
+    src: url('ubuntu-light-webfont.woff2') format('woff2'),
+         url('ubuntu-light-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ubuntu';
+    src: url('ubuntu-medium-webfont.woff2') format('woff2'),
+         url('ubuntu-medium-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+/*fonts*/
+
+body {
+    font-family: 'lifehack';
+    padding: 0;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+ul li {
+    list-style: none;
+}
+.wrapper {
+    font-family: 'lifehack';
+    width: 100px;
+    height: 100%;
+    border: 1px black solid;
+
+}
