@@ -1,0 +1,156 @@
+.intro {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+    background-image: url('../img/background_1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.intro__container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 12px;
+}
+.intro__logo {
+    display: flex;
+}
+.intro__logo-link {
+    display: inline-block;
+}
+.intro__logo-img {
+    display: inline-block;
+}
+.intro__menu {
+    display: flex;
+}
+.menu__list {
+    display: flex;
+    margin: 20px 0 0 0;
+    padding: 0;
+    align-items: center;
+}
+.menu__item {
+    margin-right: 10px;
+}
+.menu__item::after {
+    display: inline-block;
+    content: "";
+    height: 4px;
+    width: 4px; 
+    border: 1px #fff solid;
+    border-radius: 5px;
+    background-color: #fff;
+    vertical-align: middle;
+    margin-bottom: 5px;
+}
+.menu__item::after:last-child {
+    display: none;
+}
+.menu__link {
+    display: inline-flex;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 13px;
+    color: #fff;
+    padding-right: 5px;
+}
+.intro__button {
+    display: flex;
+    margin-top: 13px;
+    height: 35px;
+}
+.intr__button {
+    background-color: #e45028;
+}
+.intro__maincontent {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+.intro__maincontent-picture {
+    display: flex;
+    padding-left: 97px;
+    margin-right: 50px;
+}
+.intro__maincontent-img {
+    display: block;
+    position: relative;
+    z-index: 2;
+ }
+ .intro__maincontent-img::after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -3;
+    background-image: url('./img/intro__splash.png')center center no-repeat;
+ }
+.intro__maincontent-descr {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    
+}
+.intro__maincontent-text {
+    display: block;
+    padding: 0;
+    margin: 0;
+    font-family: 'lifehack';
+    color: #ffffff;
+    font-weight: 500;
+    letter-spacing: -1.63px;
+    font-size: 65px;
+    line-height: 60px;
+}
+.pagination {
+    display: flex;
+    position: fixed;
+    right: 20px;
+    top: 90px;
+    z-index: 10;
+}
+.pagination-list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+}
+.pagination-item {
+    display: block;
+    margin-bottom: 15px;
+    width: 16px;
+    height: 16px;
+}
+.pagination-block {
+    border: 1px #ffffff solid;
+    border-radius: 4px;
+    width: 6px;
+    height: 6px;
+    background-color: #ffffff;
+    margin-left: 4px;
+    margin-top: 4px;
+}
+.pagination-active {
+    border: 1px #ffffff solid;
+    border-radius: 9px;
+}
+.pagination-link {
+    display: block;
+    width: 7px;
+    height: 7px;
+}
+.arrowscroll-link {
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.arrowscroll-triangle {
+    position: relative;
+    width: 29px;
+    height: 14px;
+}

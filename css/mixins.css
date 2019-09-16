@@ -1,0 +1,46 @@
+body {
+  font-family: 'ubuntu';
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+ul li {
+  list-style: none; }
+
+p {
+  margin: 0;
+  padding: 0; }
+
+.container {
+  margin: 0 auto;
+  width: 940px; }
+
+.button {
+  display: block;
+  width: 97px;
+  height: 35px;
+  border-radius: 5px;
+  border: 0;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  outline: none; }
+
+.title {
+  display: block;
+  color: #f9b43b;
+  font-family: 'gagalin';
+  font-size: 72px;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding-bottom: 25px; }
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+  overflow: hidden; }
+
+/*# sourceMappingURL=mixins.css.map */
