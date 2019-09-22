@@ -5,21 +5,67 @@
   background-image: url("../img/backg_team.png");
   background-repeat: no-repeat;
   background-size: cover; }
-
-.team__container {
-  display: block;
-  position: absolute;
-  right: 0;
-  width: 50%;
-  height: 100%;
-  background-color: #2f3234;
-  opacity: 0.9; }
-
-.team__description {
-  display: flex; }
-
-.team__description {
-  display: flex;
-  border: 1px #fff solid; }
+  .team .team__container {
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #2f3234;
+    opacity: 0.9; }
+    .team .team__container .team__container-wrap {
+      display: block;
+      padding: 15% 0 0 15%; }
+      .team .team__container .team__container-wrap .team__title {
+        margin-bottom: 46px;
+        padding: 0; }
+      .team .team__container .team__container-wrap .accordion {
+        display: flex;
+        flex-direction: column; }
+        .team .team__container .team__container-wrap .accordion .accordeon__item {
+          display: block;
+          margin-bottom: 35px; }
+          .team .team__container .team__container-wrap .accordion .accordeon__item .accordion__link {
+            display: block;
+            font-family: gagalin;
+            color: #fff;
+            margin-bottom: 17px; }
+            .team .team__container .team__container-wrap .accordion .accordeon__item .accordion__link:before {
+              content: "";
+              display: inline-block;
+              margin-right: 10px;
+              width: 9px;
+              height: 9px;
+              background-image: url("../img/team-triangle.png");
+              background-repeat: no-repeat; }
+            .team .team__container .team__container-wrap .accordion .accordeon__item .accordion__link.active {
+              color: #f9b43b; }
+              .team .team__container .team__container-wrap .accordion .accordeon__item .accordion__link.active:before {
+                transform: rotate(180deg); }
+          .team .team__container .team__container-wrap .accordion .accordeon__item .accordion__container {
+            display: flex;
+            height: 0;
+            overflow: hidden;
+            flex-direction: row; }
+            .team .team__container .team__container-wrap .accordion .accordeon__item .accordion__container.active {
+              height: 100%;
+              overflow: auto; }
+            .team .team__container .team__container-wrap .accordion .accordeon__item .accordion__container .accordion__avatar {
+              display: block;
+              margin-right: 20px; }
+            .team .team__container .team__container-wrap .accordion .accordeon__item .accordion__container .accordion__description {
+              display: block;
+              width: 208px; }
+              .team .team__container .team__container-wrap .accordion .accordeon__item .accordion__container .accordion__description .accordion__description-title {
+                color: #fff;
+                padding-bottom: 15px;
+                font-family: ubuntu;
+                font-weight: 700;
+                font-size: 14px; }
+              .team .team__container .team__container-wrap .accordion .accordeon__item .accordion__container .accordion__description .accordion__description-text {
+                color: #fff;
+                font-family: ubuntu;
+                font-weight: 300;
+                font-size: 14px; }
 
 /*# sourceMappingURL=team.css.map */

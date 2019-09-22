@@ -6,20 +6,96 @@
     background-repeat: no-repeat;
     background-size: cover;
 
+    .team__container {
+        display: block;
+        position: absolute;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        background-color: #2f3234; 
+        opacity: 0.9;
+
+        .team__container-wrap {
+            display: block;
+            padding: 15% 0 0 15%;
+
+            .team__title {
+                margin-bottom: 46px;
+                padding: 0;
+            }
+
+            .accordion {
+                display: flex;
+                flex-direction: column;
+    
+                .accordeon__item {
+                    display: block;
+                    margin-bottom: 35px;
+    
+                    .accordion__link {
+                        display: block;
+                        font-family: gagalin;
+                        color: #fff;
+                        margin-bottom: 17px;
+    
+                        &:before {
+                            content: "";
+                            display: inline-block;
+                            margin-right: 10px;
+                            width: 9px;
+                            height: 9px;
+                            background-image: url('../img/team-triangle.png');
+                            background-repeat: no-repeat;
+                        }
+                        &.active {
+                            color: #f9b43b;
+
+                            &:before {
+                                transform: rotate(180deg);
+                            }
+                        }
+                    }
+
+                    .accordion__container {
+                        display: flex;
+                        height: 0;
+                        overflow: hidden;
+                        flex-direction: row;
+
+                        &.active {
+                            height: 100%;
+                            overflow: auto;
+                        }
+
+                        .accordion__avatar {
+                            display: block;
+                            margin-right: 20px;
+                        }
+                        
+                        .accordion__description {
+                            display: block;
+                            width: 208px;
+
+                            .accordion__description-title {
+                                color: #fff;
+                                padding-bottom: 15px;
+                                font-family: ubuntu;
+                                font-weight: 700;
+                                font-size: 14px;
+                            }
+                            .accordion__description-text {
+                                color: #fff;
+                                font-family: ubuntu;
+                                font-weight: 300;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        
+    } 
 }
-.team__container {
-    display: block;
-    position: absolute;
-    right: 0;
-    width: 50%;
-    height: 100%;
-    background-color: #2f3234; 
-    opacity: 0.9;
-}
-.team__description {
-    display: flex;
-}
-.team__description {
-    display: flex;
-    border: 1px #fff solid;
-}
+
