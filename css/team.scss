@@ -12,8 +12,7 @@
         right: 0;
         width: 50%;
         height: 100%;
-        background-color: #2f3234; 
-        opacity: 0.9;
+        background: rgba(#2f3234, .9);
 
         .team__container-wrap {
             display: block;
@@ -24,7 +23,7 @@
                 padding: 0;
             }
 
-            .accordion {
+            .accordeon {
                 display: flex;
                 flex-direction: column;
     
@@ -32,7 +31,7 @@
                     display: block;
                     margin-bottom: 35px;
     
-                    .accordion__link {
+                    .accordeon__link {
                         display: block;
                         font-family: gagalin;
                         color: #fff;
@@ -47,43 +46,42 @@
                             background-image: url('../img/team-triangle.png');
                             background-repeat: no-repeat;
                         }
-                        &.active {
-                            color: #f9b43b;
-
-                            &:before {
-                                transform: rotate(180deg);
-                            }
-                        }
                     }
 
-                    .accordion__container {
+                    .accordeon__container {
                         display: flex;
                         height: 0;
                         overflow: hidden;
                         flex-direction: row;
 
-                        &.active {
-                            height: 100%;
-                            overflow: auto;
-                        }
-
-                        .accordion__avatar {
+                        .accordeon__avatar {
                             display: block;
                             margin-right: 20px;
+                            
+                            border:1px solid transparent;
+                            border-radius: 50%;
+                            overflow: hidden;
+                            flex-shrink: 0;
+
+                            .accordion__avatar-img {
+                                width: 100px;
+                                height: 100px;
+                                object-fit: cover;
+                            }
                         }
                         
-                        .accordion__description {
+                        .accordeon__description {
                             display: block;
                             width: 208px;
 
-                            .accordion__description-title {
+                            .accordeon__description-title {
                                 color: #fff;
-                                padding-bottom: 15px;
+                                margin-bottom: 15px;
                                 font-family: ubuntu;
                                 font-weight: 700;
                                 font-size: 14px;
                             }
-                            .accordion__description-text {
+                            .accordeon__description-text {
                                 color: #fff;
                                 font-family: ubuntu;
                                 font-weight: 300;
@@ -92,10 +90,27 @@
                         }
                     }
                 }
-            }
-        }
 
-        
+                .accordeon__item + .active {
+                    .accordeon__link {
+                        color: #f9b43b;
+
+                        &:before {
+                            transform: rotate(180deg);
+                        }
+                    }
+                    
+                    .accordeon__container {
+                        height: 100%;
+                        overflow: auto;
+                    }
+                }
+
+                .accordeon__item:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }    
     } 
 }
 

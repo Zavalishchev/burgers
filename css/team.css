@@ -11,26 +11,25 @@
     right: 0;
     width: 50%;
     height: 100%;
-    background-color: #2f3234;
-    opacity: 0.9; }
+    background: rgba(47, 50, 52, 0.9); }
     .team .team__container .team__container-wrap {
       display: block;
       padding: 15% 0 0 15%; }
       .team .team__container .team__container-wrap .team__title {
         margin-bottom: 46px;
         padding: 0; }
-      .team .team__container .team__container-wrap .accordion {
+      .team .team__container .team__container-wrap .accordeon {
         display: flex;
         flex-direction: column; }
-        .team .team__container .team__container-wrap .accordion .accordeon__item {
+        .team .team__container .team__container-wrap .accordeon .accordeon__item {
           display: block;
           margin-bottom: 35px; }
-          .team .team__container .team__container-wrap .accordion .accordeon__item .accordion__link {
+          .team .team__container .team__container-wrap .accordeon .accordeon__item .accordeon__link {
             display: block;
             font-family: gagalin;
             color: #fff;
             margin-bottom: 17px; }
-            .team .team__container .team__container-wrap .accordion .accordeon__item .accordion__link:before {
+            .team .team__container .team__container-wrap .accordeon .accordeon__item .accordeon__link:before {
               content: "";
               display: inline-block;
               margin-right: 10px;
@@ -38,34 +37,44 @@
               height: 9px;
               background-image: url("../img/team-triangle.png");
               background-repeat: no-repeat; }
-            .team .team__container .team__container-wrap .accordion .accordeon__item .accordion__link.active {
-              color: #f9b43b; }
-              .team .team__container .team__container-wrap .accordion .accordeon__item .accordion__link.active:before {
-                transform: rotate(180deg); }
-          .team .team__container .team__container-wrap .accordion .accordeon__item .accordion__container {
+          .team .team__container .team__container-wrap .accordeon .accordeon__item .accordeon__container {
             display: flex;
             height: 0;
             overflow: hidden;
             flex-direction: row; }
-            .team .team__container .team__container-wrap .accordion .accordeon__item .accordion__container.active {
-              height: 100%;
-              overflow: auto; }
-            .team .team__container .team__container-wrap .accordion .accordeon__item .accordion__container .accordion__avatar {
+            .team .team__container .team__container-wrap .accordeon .accordeon__item .accordeon__container .accordeon__avatar {
               display: block;
-              margin-right: 20px; }
-            .team .team__container .team__container-wrap .accordion .accordeon__item .accordion__container .accordion__description {
+              margin-right: 20px;
+              border: 1px solid transparent;
+              border-radius: 50%;
+              overflow: hidden;
+              flex-shrink: 0; }
+              .team .team__container .team__container-wrap .accordeon .accordeon__item .accordeon__container .accordeon__avatar .accordion__avatar-img {
+                width: 100px;
+                height: 100px;
+                object-fit: cover; }
+            .team .team__container .team__container-wrap .accordeon .accordeon__item .accordeon__container .accordeon__description {
               display: block;
               width: 208px; }
-              .team .team__container .team__container-wrap .accordion .accordeon__item .accordion__container .accordion__description .accordion__description-title {
+              .team .team__container .team__container-wrap .accordeon .accordeon__item .accordeon__container .accordeon__description .accordeon__description-title {
                 color: #fff;
-                padding-bottom: 15px;
+                margin-bottom: 15px;
                 font-family: ubuntu;
                 font-weight: 700;
                 font-size: 14px; }
-              .team .team__container .team__container-wrap .accordion .accordeon__item .accordion__container .accordion__description .accordion__description-text {
+              .team .team__container .team__container-wrap .accordeon .accordeon__item .accordeon__container .accordeon__description .accordeon__description-text {
                 color: #fff;
                 font-family: ubuntu;
                 font-weight: 300;
                 font-size: 14px; }
+        .team .team__container .team__container-wrap .accordeon .accordeon__item + .active .accordeon__link {
+          color: #f9b43b; }
+          .team .team__container .team__container-wrap .accordeon .accordeon__item + .active .accordeon__link:before {
+            transform: rotate(180deg); }
+        .team .team__container .team__container-wrap .accordeon .accordeon__item + .active .accordeon__container {
+          height: 100%;
+          overflow: auto; }
+        .team .team__container .team__container-wrap .accordeon .accordeon__item:last-child {
+          margin-bottom: 0; }
 
 /*# sourceMappingURL=team.css.map */
