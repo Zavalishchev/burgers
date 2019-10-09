@@ -1,0 +1,75 @@
+.contacts {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../img/background__map.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.footer {
+    display: inline-block;
+    position: absolute;
+    margin: 0 auto;
+    min-width: 100%;
+
+    .footer__container {
+        display: flex;
+        background-color: #111111;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .contacts__address {
+            display: block;
+            position: relative;
+            margin: 10px;
+
+            .contacts__address {
+                margin: 0;
+                color: #ffffff;
+                font-family: 'ubuntu';
+                font-size: 14px;
+                font-weight: 300;
+                padding-bottom: 5px;
+            }
+            .contacts__telephone {
+                font-family: 'ubuntu';
+                color: #e45028;
+                font-weight: 700;
+            }
+        }
+
+        .footer__social {
+            display: flex;
+            position: relative;
+            margin-top: 20px;
+            margin-right: 10px;
+
+            .contacts__social-list {
+                display: flex;
+                flex-direction: row;
+
+                .contacts__social-item {
+                    display: block;
+                    margin-right: 20px;
+                    width: 23px;
+                    height: 23px;
+
+                    .contacts__social-link {
+                        justify-content: center;
+                        align-content: center;
+                    }
+
+                    .contacts__social-link:hover {
+
+                        .contacts__social-img {
+                            opacity: 0.5;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
