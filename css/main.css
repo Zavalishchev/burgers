@@ -678,57 +678,153 @@ a {
 .feedback_button {
   background-color: #2f3234; }
 
+.delivery {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #222222;
+  background-image: url("../img/background_delivery.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center; }
+  .delivery .delivery__container {
+    display: flex;
+    position: relative;
+    top: 25%;
+    flex-direction: column; }
+    .delivery .delivery__container .delivery__title-txt {
+      text-align: center;
+      color: #f9b43b;
+      font-family: 'gagalin';
+      font-size: 72px;
+      font-weight: 400;
+      text-transform: uppercase;
+      margin-bottom: 40px; }
+    .delivery .delivery__container .delivery__orderform {
+      display: flex;
+      flex-direction: row; }
+      .delivery .delivery__container .delivery__orderform .delivery__orderform-address-list {
+        display: flex;
+        flex-wrap: wrap;
+        width: 480px;
+        height: 206px; }
+        .delivery .delivery__container .delivery__orderform .delivery__orderform-address-list .orderform-address-item {
+          display: block;
+          margin-bottom: 20px;
+          margin-right: 19px; }
+          .delivery .delivery__container .delivery__orderform .delivery__orderform-address-list .orderform-address-item .orderform-address-item-title {
+            font-family: 'ubuntu';
+            font-size: 14px;
+            font-weight: 300;
+            color: #ffffff;
+            margin-bottom: 5px; }
+          .delivery .delivery__container .delivery__orderform .delivery__orderform-address-list .orderform-address-item .orderform-address-item-autorization {
+            width: 221px;
+            height: 35px;
+            border-radius: 5px;
+            border-style: none;
+            padding-left: 10px;
+            outline-color: #f9b43b; }
+          .delivery .delivery__container .delivery__orderform .delivery__orderform-address-list .orderform-address-item .street {
+            width: 460px; }
+          .delivery .delivery__container .delivery__orderform .delivery__orderform-address-list .orderform-address-item .apartment {
+            width: 100px; }
+      .delivery .delivery__container .delivery__orderform .delivery__orderform-additional-list {
+        display: flex;
+        flex-wrap: wrap;
+        width: 480px; }
+        .delivery .delivery__container .delivery__orderform .delivery__orderform-additional-list .orderform-additional-item {
+          display: block;
+          margin-bottom: 20px; }
+          .delivery .delivery__container .delivery__orderform .delivery__orderform-additional-list .orderform-additional-item .orderform-additional-title {
+            font-family: 'ubuntu';
+            font-size: 14px;
+            font-weight: 300;
+            color: #ffffff;
+            margin-bottom: 5px; }
+          .delivery .delivery__container .delivery__orderform .delivery__orderform-additional-list .orderform-additional-item .additional-item-autorization {
+            width: 460px;
+            height: 109px;
+            border-radius: 5px;
+            border-style: none;
+            padding-left: 10px;
+            outline-color: #f9b43b; }
+          .delivery .delivery__container .delivery__orderform .delivery__orderform-additional-list .orderform-additional-item .additional-radio {
+            margin: 0;
+            margin-right: 10px; }
+          .delivery .delivery__container .delivery__orderform .delivery__orderform-additional-list .orderform-additional-item .additional-radio-txt {
+            font-family: 'ubuntu';
+            font-size: 14px;
+            font-weight: 300;
+            color: #ffffff;
+            margin-right: 20px; }
+          .delivery .delivery__container .delivery__orderform .delivery__orderform-additional-list .orderform-additional-item .orderform-additional-submit {
+            display: block;
+            margin-top: 10px;
+            min-width: 740px;
+            clear: both; }
+            .delivery .delivery__container .delivery__orderform .delivery__orderform-additional-list .orderform-additional-item .orderform-additional-submit .additional-submit {
+              margin-right: 20px;
+              width: 97px;
+              height: 35px;
+              background-color: #e35028;
+              border-radius: 5px;
+              border: none;
+              color: #ffffff; }
+
 .contacts {
   display: flex;
+  position: relative;
   width: 100%;
   height: 100vh;
   background-image: url("../img/background__map.png");
   background-repeat: no-repeat;
   background-size: cover; }
-
-.footer {
-  display: inline-block;
-  position: absolute;
-  margin: 0 auto;
-  min-width: 100%; }
-  .footer .footer__container {
-    display: flex;
-    background-color: #111111;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap; }
-    .footer .footer__container .contacts__address {
-      display: block;
-      position: relative;
-      margin: 10px; }
-      .footer .footer__container .contacts__address .contacts__address {
-        margin: 0;
-        color: #ffffff;
-        font-family: 'ubuntu';
-        font-size: 14px;
-        font-weight: 300;
-        padding-bottom: 5px; }
-      .footer .footer__container .contacts__address .contacts__telephone {
-        font-family: 'ubuntu';
-        color: #e45028;
-        font-weight: 700; }
-    .footer .footer__container .footer__social {
+  .contacts .footer {
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    margin: 0 auto;
+    min-width: 100%; }
+    .contacts .footer .footer__container {
       display: flex;
-      position: relative;
-      margin-top: 20px;
-      margin-right: 10px; }
-      .footer .footer__container .footer__social .contacts__social-list {
+      background-color: #111111;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap; }
+      .contacts .footer .footer__container .contacts__address {
+        display: block;
+        position: relative;
+        margin: 10px; }
+        .contacts .footer .footer__container .contacts__address .contacts__address {
+          margin: 0;
+          color: #ffffff;
+          font-family: 'ubuntu';
+          font-size: 14px;
+          font-weight: 300;
+          padding-bottom: 5px; }
+        .contacts .footer .footer__container .contacts__address .contacts__telephone {
+          font-family: 'ubuntu';
+          color: #e45028;
+          font-weight: 700; }
+      .contacts .footer .footer__container .footer__social {
         display: flex;
-        flex-direction: row; }
-        .footer .footer__container .footer__social .contacts__social-list .contacts__social-item {
-          display: block;
-          margin-right: 20px;
-          width: 23px;
-          height: 23px; }
-          .footer .footer__container .footer__social .contacts__social-list .contacts__social-item .contacts__social-link {
-            justify-content: center;
-            align-content: center; }
-          .footer .footer__container .footer__social .contacts__social-list .contacts__social-item .contacts__social-link:hover .contacts__social-img {
-            opacity: 0.5; }
+        position: relative;
+        margin-top: 20px;
+        margin-right: 10px; }
+        .contacts .footer .footer__container .footer__social .contacts__social-list {
+          display: flex;
+          flex-direction: row; }
+          .contacts .footer .footer__container .footer__social .contacts__social-list .contacts__social-item {
+            display: block;
+            margin-right: 20px;
+            width: 23px;
+            height: 23px; }
+            .contacts .footer .footer__container .footer__social .contacts__social-list .contacts__social-item .contacts__social-link {
+              justify-content: center;
+              align-content: center; }
+            .contacts .footer .footer__container .footer__social .contacts__social-list .contacts__social-item .contacts__social-link:hover .contacts__social-img {
+              opacity: 0.5; }
 
 /*# sourceMappingURL=main.css.map */
