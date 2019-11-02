@@ -1,3 +1,5 @@
+@import "./function.scss";
+
 .team {
     display: flex;
     width: 100%;
@@ -14,12 +16,19 @@
         height: 100%;
         background: rgba(#2f3234, .9);
 
+        @include tablets {
+            display: flex;
+            left: 0;
+            width: 100%;
+            align-items: center;
+        }
+
         .team__container-wrap {
             display: block;
             padding: 15% 0 0 15%;
 
             .team__title {
-                margin-bottom: 46px;
+                margin-bottom: rem(46px);
                 padding: 0;
             }
 
@@ -29,20 +38,21 @@
     
                 .accordeon__item {
                     display: block;
-                    margin-bottom: 35px;
+                    margin-bottom: rem(35px);
+                    overflow: hidden;
     
                     .accordeon__link {
                         display: block;
                         font-family: gagalin;
                         color: #fff;
-                        margin-bottom: 17px;
+                        margin-bottom: rem(17px);
     
                         &:before {
                             content: "";
                             display: inline-block;
-                            margin-right: 10px;
-                            width: 9px;
-                            height: 9px;
+                            margin-right: rem(10px);
+                            width: rem(9px);
+                            height: rem(9px);
                             background-image: url('../img/team-triangle.png');
                             background-repeat: no-repeat;
                         }
@@ -54,38 +64,43 @@
                         overflow: hidden;
                         flex-direction: row;
 
+                        @include tablets {
+                            flex-direction: column;
+                        }
+
                         .accordeon__avatar {
                             display: block;
-                            margin-right: 20px;
+                            margin-right: rem(20px);
                             
-                            border:1px solid transparent;
+                            border:rem(1px) solid transparent;
                             border-radius: 50%;
                             overflow: hidden;
                             flex-shrink: 0;
 
                             .accordion__avatar-img {
-                                width: 100px;
-                                height: 100px;
+                                width: rem(100px);
+                                height: rem(100px);
                                 object-fit: cover;
                             }
                         }
                         
                         .accordeon__description {
                             display: block;
-                            width: 208px;
+                            width: rem(208px);
+                            overflow: hidden;
 
                             .accordeon__description-title {
                                 color: #fff;
-                                margin-bottom: 15px;
+                                margin-bottom: rem(15px);
                                 font-family: ubuntu;
                                 font-weight: 700;
-                                font-size: 14px;
+                                font-size: rem(14px);
                             }
                             .accordeon__description-text {
                                 color: #fff;
                                 font-family: ubuntu;
                                 font-weight: 300;
-                                font-size: 14px;
+                                font-size: rem(14px);
                             }
                         }
                     }

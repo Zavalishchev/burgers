@@ -1,3 +1,5 @@
+@import "./function.scss";
+
 .delivery {
     display: flex;
     position: relative;
@@ -19,109 +21,172 @@
             text-align: center;
             color: #f9b43b;
             font-family: 'gagalin';
-            font-size: 72px;
+            font-size: rem(72px);
             font-weight: 400;
             text-transform: uppercase;
-            margin-bottom: 40px;
+            margin-bottom: rem(40px);
         }
 
         .delivery__orderform {
             display: flex;
             flex-direction: row;
 
-            .delivery__orderform-address-list {
+            .orderform-address-list {
                 display: flex;
                 flex-wrap: wrap;
-                width: 480px;
-                height: 206px;
+                width: rem(480px);
+                height: rem(206px);
 
-                .orderform-address-item {
-                    display: block;
-                    margin-bottom: 20px;
-                    margin-right: 19px;
+                .address-list-row {
+                    display: flex;
+                    flex-direction: row;
 
-                    .orderform-address-item-title {
-                        font-family: 'ubuntu';
-                        font-size: 14px;
-                        font-weight: 300;
-                        color: #ffffff;
-                        margin-bottom: 5px;
-                    }
-
-                    .orderform-address-item-autorization {
-                        width: 221px;
-                        height: 35px;
-                        border-radius: 5px;
-                        border-style: none;
-                        padding-left: 10px;
-                        outline-color: #f9b43b;
-                    }
-
-                    .street {
-                        width: 460px;
-                    }
-                    .apartment {
-                        width: 100px;
+                    .address-item {
+                        display: block;
+                        margin-bottom: rem(20px);
+                        margin-right: rem(20px);
+    
+                        .address-item-title {
+                            font-family: 'ubuntu';
+                            font-size: rem(14px);
+                            font-weight: 300;
+                            color: #ffffff;
+                            margin-bottom: rem(5px);
+                        }
+    
+                        .address-item-autorization {
+                            width: rem(221px);
+                            height: rem(35px);
+                            border-radius: rem(5px);
+                            border-style: none;
+                            padding-left: rem(10px);
+                            outline-color: #f9b43b;
+                        }
+    
+                        .street {
+                            width: rem(460px);
+                        }
+                        .apartment {
+                            width: rem(100px);
+                        }
                     }
                 }
             }
 
-            .delivery__orderform-additional-list {
+            .orderform-additional-list {
                 display: flex;
                 flex-wrap: wrap;
-                width: 480px;
+                width: rem(480px);
 
-                .orderform-additional-item {
-                    display: block;
-                    margin-bottom: 20px;
+                .additional-list-row {
+                    display: flex;
+                    flex-direction: row;
 
-                    .orderform-additional-title {
-                        font-family: 'ubuntu';
-                        font-size: 14px;
-                        font-weight: 300;
-                        color: #ffffff;
-                        margin-bottom: 5px;
+                    .additional-container {
+                        margin-right: rem(20px);
                     }
 
-                    .additional-item-autorization {
-                        width: 460px;
-                        height: 109px;
-                        border-radius: 5px;
-                        border-style: none;
-                        padding-left: 10px;
-                        outline-color: #f9b43b;
-                    }
-
-                    .additional-radio {
-                        margin: 0;
-                        margin-right: 10px;  
-                    }
-
-                    .additional-radio-txt {
-                        font-family: 'ubuntu';
-                        font-size: 14px;
-                        font-weight: 300;
-                        color: #ffffff;
-                        margin-right: 20px;
-                    }
-
-                    .orderform-additional-submit {
+                    .additional-item {
                         display: block;
-                        margin-top: 10px;
-                        min-width: 740px;
-                        clear: both;
-
-                        .additional-submit {
-                            margin-right: 20px;
-                            width: 97px;
-                            height: 35px;
-                            background-color: #e35028;
-                            border-radius: 5px;
-                            border: none;
+                        margin-bottom: rem(20px);
+    
+                        .additional-title {
+                            font-family: 'ubuntu';
+                            font-size: rem(14px);
+                            font-weight: 300;
                             color: #ffffff;
+                            margin-bottom: rem(5px);
+                        }
+    
+                        .additional-item-autorization {
+                            width: rem(460px);
+                            height: rem(109px);
+                            border-radius: rem(5px);
+                            border-style: none;
+                            padding-left: rem(10px);
+                            padding-top: rem(5px);
+                            outline-color: #f9b43b;
+                        }
+    
+                        .additional-radio {
+                            margin: 0;
+                            margin-right: rem(10px); 
+                            display: none; 
+                        }
+
+                        .radio__idicator {
+                            display: inline-block;
+                            width: rem(16px);
+                            height: rem(16px);
+                            border: 1px #fff solid;
+                            background-color: #fff;
+                            border-radius: 50%;
+                            cursor: pointer;
+                            margin-right: 10px;
+                            position: relative;
+                        }
+
+                        .additional-radio:checked + .radio__idicator::before {
+                            content: "";
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 0.5rem;
+                            height: 0.5rem;
+                            background-color: #e35028;
+                            border-radius: 50%;
+                        }
+    
+                        .additional-radio-txt {
+                            font-family: 'ubuntu';
+                            font-size: rem(14px);
+                            font-weight: 300;
+                            color: #ffffff;
+                            margin-right: rem(20px);
+                        }
+                        .additional-check {
+                            display: none;
+                        }
+
+                        .checkbox__indicator {
+                            display: inline-block;
+                            position: relative;
+                            width: rem(12px);
+                            height: rem(12px);
+                            border: 1px #fff solid;
+                            background-color: #fff;
+                            border-radius: rem(2px);
+                            margin-right: rem(10px);
+                        }
+
+                        .additional-check:checked + .checkbox__indicator::before {
+                            content: "\2714";
+                            position: absolute;
+                            top: rem(-13px);
+                            left: rem(-1px);
+                            font-size: rem(20px);
+                            color: #e35028;
+                        }
+    
+                        .additional-submit-container {
+                            display: block;
+                            margin-top: rem(10px);
+                            min-width: rem(740px);
+                            clear: both;
+    
+                            .additional-submit {
+                                margin-right: rem(20px);
+                                width: rem(97px);
+                                height: rem(35px);
+                                background-color: #e35028;
+                                border-radius: rem(5px);
+                                border: none;
+                                color: #ffffff;
+                            }
                         }
                     }
-                }
+                }   
             }
         }
     }

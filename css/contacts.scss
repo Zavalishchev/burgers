@@ -1,3 +1,5 @@
+@import "./function.scss";
+
 .contacts {
     display: flex;
     position: relative;
@@ -8,15 +10,13 @@
     background-size: cover;
 
     .footer {
-        display: inline-block;
         position: absolute;
+        background-color: #111111;
         bottom: 0;
-        margin: 0 auto;
-        min-width: 100%;
+        width: 100%;
     
         .footer__container {
             display: flex;
-            background-color: #111111;
             flex-direction: row;
             justify-content: space-between;
             flex-wrap: wrap;
@@ -24,15 +24,15 @@
             .contacts__address {
                 display: block;
                 position: relative;
-                margin: 10px;
+                margin: rem(10px);
     
-                .contacts__address {
+                .contacts__address-title {
                     margin: 0;
                     color: #ffffff;
                     font-family: 'ubuntu';
-                    font-size: 14px;
+                    font-size: rem(14px);
                     font-weight: 300;
-                    padding-bottom: 5px;
+                    padding-bottom: rem(5px);
                 }
                 .contacts__telephone {
                     font-family: 'ubuntu';
@@ -44,34 +44,37 @@
             .footer__social {
                 display: flex;
                 position: relative;
-                margin-top: 20px;
-                margin-right: 10px;
+                margin-top: rem(20px);
+                margin-right: rem(10px);
     
-                .contacts__social-list {
+                .social-list {
                     display: flex;
                     flex-direction: row;
     
-                    .contacts__social-item {
+                    .social-item {
                         display: block;
-                        margin-right: 20px;
-                        width: 23px;
-                        height: 23px;
+                        margin-right: rem(20px);
+                        width: rem(23px);
+                        height: rem(23px);
+
     
-                        .contacts__social-link {
+                        .social-link {
                             justify-content: center;
                             align-content: center;
                         }
     
-                        .contacts__social-link:hover {
-    
+                        .social-link:hover {
                             .contacts__social-img {
                                 opacity: 0.5;
                             }
                         }
                     }
+
+                    .social-item:last-child {
+                        margin: 0;
+                    }
                 }
             }
-            
         }
     }
 }

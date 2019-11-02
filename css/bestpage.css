@@ -6,57 +6,60 @@
   background-image: url("../img/backgrounf_2.png");
   background-repeat: no-repeat;
   background-size: cover; }
-
-.bestpage__container {
-  display: flex;
-  vertical-align: middle;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-
-.bestpage__title-text {
-  display: block;
-  margin: 133px 0 55px 0;
-  padding: 0;
-  color: #2f3234;
-  font-family: 'gagalin';
-  font-size: 72px;
-  font-weight: 400; }
-
-.bestpage__list {
-  display: flex;
-  justify-content: space-between;
-  margin: 0;
-  padding: 0;
-  flex-direction: row; }
-
-.bestpage__item {
-  display: flex;
-  align-items: center;
-  flex: 1;
-  flex-direction: column; }
-
-.bestpage__item-container-img {
-  width: 97px;
-  height: 89px;
-  align-items: center; }
-
-.bestpage__item-pict {
-  max-width: 100%;
-  max-height: 100%; }
-
-.bestpage__title {
-  color: #2f3234; }
-
-.bestpage__item-txt {
-  display: block;
-  margin: 0;
-  padding: 0 10px;
-  align-self: flex-end;
-  opacity: 0.8;
-  color: #2f3234;
-  font-family: 'ubuntu';
-  font-size: 14px;
-  font-weight: 300; }
+  .bestpage .bestpage__container {
+    display: flex;
+    vertical-align: middle;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .bestpage .bestpage__container .bestpage__title-text {
+      display: block;
+      margin: 8.3125rem 0 1.25rem 0;
+      color: #2f3234; }
+      @media screen and (max-width: 480px) {
+        .bestpage .bestpage__container .bestpage__title-text {
+          text-align: center; } }
+    .bestpage .bestpage__container .bestpage__list {
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+      padding: 0;
+      flex-direction: row; }
+      @media screen and (max-width: 480px) {
+        .bestpage .bestpage__container .bestpage__list {
+          flex-direction: column;
+          width: 21.875rem;
+          text-align: center; } }
+      .bestpage .bestpage__container .bestpage__list .bestpage__item {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        flex-direction: column; }
+        @media screen and (max-width: 480px) {
+          .bestpage .bestpage__container .bestpage__list .bestpage__item {
+            margin-bottom: 0.625rem; } }
+        .bestpage .bestpage__container .bestpage__list .bestpage__item .bestpage__item-container-img {
+          width: 6.0625rem;
+          height: 5.5625rem;
+          align-items: center;
+          margin-bottom: 0.625rem; }
+          .bestpage .bestpage__container .bestpage__list .bestpage__item .bestpage__item-container-img .bestpage__item-pict {
+            max-width: 100%;
+            max-height: 100%;
+            text-align: center;
+            margin-bottom: 0.625rem; }
+        .bestpage .bestpage__container .bestpage__list .bestpage__item .bestpage__item-title {
+          color: #2f3234;
+          margin-bottom: 0.625rem; }
+        .bestpage .bestpage__container .bestpage__list .bestpage__item .bestpage__item-txt {
+          display: block;
+          margin: 0;
+          padding: 0 0.625rem;
+          align-self: flex-end;
+          opacity: 0.8;
+          color: #2f3234;
+          font-family: 'ubuntu';
+          font-size: 0.875rem;
+          font-weight: 300; }
 
 /*# sourceMappingURL=bestpage.css.map */

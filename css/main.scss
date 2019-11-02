@@ -8,9 +8,12 @@ $red: #e35028;
 // setups
 @import "./fonts.scss";
 @import "./mixins.scss";
+@import "./function.scss";
 
 // blocks
 @import "./intro.scss";
+@import "./hamburger.scss";
+@import "./pagination.scss";
 @import "./bestpage.scss";
 @import "./ingredients.scss";
 @import "./team.scss";

@@ -1,3 +1,5 @@
+@import "./function.scss";
+
 .menupage {
     display: flex;
     position: relative;
@@ -16,9 +18,8 @@
         .menupage__title-txt {
             color: #ffffff;
             font-family: 'gagalin';
-            font-size: 72px;
+            font-size: rem(72px);
             font-weight: 400;
-            
         }
     }
 
@@ -41,7 +42,7 @@
                 .menupage__accordeon-link {
                     display: block;
                     position: relative;
-                    width: 80px;
+                    width: rem(80px);
                     height: 100%;
                     background-size: cover;
                     background-position: center center;
@@ -52,7 +53,7 @@
                         margin-top: -1.25rem;
                         color: #ffffff;
                         font-family: 'gagalin';
-                        font-size: 40px;
+                        font-size: rem(40px);
                         font-weight: 400;
                         transform: rotate(-90deg) translateY(-50%);
                         transform-origin: 0 0;
@@ -66,10 +67,10 @@
                 .menupage__accordeon-content{
                     height: 100%;
                     overflow: hidden;
-                    width: 0px;
+                    width: rem(0px);
 
                     .menupage__accordeon-content-text {
-                        padding: 50px 30px 0 30px;
+                        padding: rem(50px) rem(30px) 0 rem(30px);
                         color: #fff;
                         font-family: 'ubuntu';
                         font-weight: 300;
@@ -79,7 +80,7 @@
 
                 &.active {
                     .menupage__accordeon-content {
-                        width: 540px;
+                        width: rem(540px);
                         background: rgb(54, 54, 54);
                         opacity: .9;
                     }

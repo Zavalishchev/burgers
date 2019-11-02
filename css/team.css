@@ -12,29 +12,36 @@
     width: 50%;
     height: 100%;
     background: rgba(47, 50, 52, 0.9); }
+    @media screen and (max-width: 768px) {
+      .team .team__container {
+        display: flex;
+        left: 0;
+        width: 100%;
+        align-items: center; } }
     .team .team__container .team__container-wrap {
       display: block;
       padding: 15% 0 0 15%; }
       .team .team__container .team__container-wrap .team__title {
-        margin-bottom: 46px;
+        margin-bottom: 2.875rem;
         padding: 0; }
       .team .team__container .team__container-wrap .accordeon {
         display: flex;
         flex-direction: column; }
         .team .team__container .team__container-wrap .accordeon .accordeon__item {
           display: block;
-          margin-bottom: 35px; }
+          margin-bottom: 2.1875rem;
+          overflow: hidden; }
           .team .team__container .team__container-wrap .accordeon .accordeon__item .accordeon__link {
             display: block;
             font-family: gagalin;
             color: #fff;
-            margin-bottom: 17px; }
+            margin-bottom: 1.0625rem; }
             .team .team__container .team__container-wrap .accordeon .accordeon__item .accordeon__link:before {
               content: "";
               display: inline-block;
-              margin-right: 10px;
-              width: 9px;
-              height: 9px;
+              margin-right: 0.625rem;
+              width: 0.5625rem;
+              height: 0.5625rem;
               background-image: url("../img/team-triangle.png");
               background-repeat: no-repeat; }
           .team .team__container .team__container-wrap .accordeon .accordeon__item .accordeon__container {
@@ -42,31 +49,35 @@
             height: 0;
             overflow: hidden;
             flex-direction: row; }
+            @media screen and (max-width: 768px) {
+              .team .team__container .team__container-wrap .accordeon .accordeon__item .accordeon__container {
+                flex-direction: column; } }
             .team .team__container .team__container-wrap .accordeon .accordeon__item .accordeon__container .accordeon__avatar {
               display: block;
-              margin-right: 20px;
-              border: 1px solid transparent;
+              margin-right: 1.25rem;
+              border: 0.0625rem solid transparent;
               border-radius: 50%;
               overflow: hidden;
               flex-shrink: 0; }
               .team .team__container .team__container-wrap .accordeon .accordeon__item .accordeon__container .accordeon__avatar .accordion__avatar-img {
-                width: 100px;
-                height: 100px;
+                width: 6.25rem;
+                height: 6.25rem;
                 object-fit: cover; }
             .team .team__container .team__container-wrap .accordeon .accordeon__item .accordeon__container .accordeon__description {
               display: block;
-              width: 208px; }
+              width: 13rem;
+              overflow: hidden; }
               .team .team__container .team__container-wrap .accordeon .accordeon__item .accordeon__container .accordeon__description .accordeon__description-title {
                 color: #fff;
-                margin-bottom: 15px;
+                margin-bottom: 0.9375rem;
                 font-family: ubuntu;
                 font-weight: 700;
-                font-size: 14px; }
+                font-size: 0.875rem; }
               .team .team__container .team__container-wrap .accordeon .accordeon__item .accordeon__container .accordeon__description .accordeon__description-text {
                 color: #fff;
                 font-family: ubuntu;
                 font-weight: 300;
-                font-size: 14px; }
+                font-size: 0.875rem; }
         .team .team__container .team__container-wrap .accordeon .accordeon__item + .active .accordeon__link {
           color: #f9b43b; }
           .team .team__container .team__container-wrap .accordeon .accordeon__item + .active .accordeon__link:before {

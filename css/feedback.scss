@@ -1,62 +1,69 @@
+@import "./function.scss";
+
 .feedback {
     display: flex;
     position: relative;
     width: 100%;
     height: 100vh;
     justify-content: center;
-}
-.feedback__list {
-    display: flex;
-    position: relative;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-.feedback__item {
-    display: flex;
-    position: relative;
-    height: 50%;
-    width: 25%;
-}
-.feedback__item-pict {
-    display: flex;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-.feedback__item-block {
-    display: none;
-}
-.feedback__item:hover .feedback__item-block {
-    display: block;
-    padding: 20px;
-    position: absolute;
-    background-color: black;
-    opacity: 0.7;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-}
-.feedback__item-name {
-    color: #ffffff;
-    font-family: 'gagalin';
-    font-size: 16px;
-    font-weight: 400;
-    text-transform: uppercase;
-    opacity: 1;
-}
-.feedback__item-text {
-    color: #ffffff;
-    font-family: 'ubuntu';
-    font-size: 14px;
-    line-height: 24px;
-    opacity: 1;
-    font-weight: 300; 
-    padding-bottom: 20px;
-}
-.feedback_button {
-    background-color: #2f3234;
+
+    .feedback__list {
+        display: flex;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .feedback__item {
+            display: flex;
+            position: relative;
+            height: 50%;
+            width: 25%;
+
+            .feedback__item-pict {
+                display: flex;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+            .feedback__item-block {
+                display: none;
+
+                
+                .feedback__item-name {
+                    color: #ffffff;
+                    font-family: 'gagalin';
+                    font-size: rem(16px);
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    opacity: 1;
+                }
+                .feedback__item-text {
+                    color: #ffffff;
+                    font-family: 'ubuntu';
+                    font-size: rem(14px);
+                    line-height: rem(24px);
+                    opacity: 1;
+                    font-weight: 300; 
+                    padding-bottom: rem(20px);
+                }
+                .feedback_button {
+                    background-color: #2f3234;
+                }
+            }
+        }
+        .feedback__item:hover .feedback__item-block {
+            display: block;
+            padding: rem(20px);
+            position: absolute;
+            background-color: black;
+            opacity: 0.7;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+        }
+    }
 }
