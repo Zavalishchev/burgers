@@ -18,7 +18,9 @@
       color: #2f3234; }
       @media screen and (max-width: 480px) {
         .bestpage .bestpage__container .bestpage__title-text {
-          text-align: center; } }
+          text-align: center;
+          margin: 0;
+          padding: 0; } }
     .bestpage .bestpage__container .bestpage__list {
       display: flex;
       justify-content: space-between;
@@ -50,7 +52,8 @@
             margin-bottom: 0.625rem; }
         .bestpage .bestpage__container .bestpage__list .bestpage__item .bestpage__item-title {
           color: #2f3234;
-          margin-bottom: 0.625rem; }
+          margin-bottom: 0.625rem;
+          text-align: center; }
         .bestpage .bestpage__container .bestpage__list .bestpage__item .bestpage__item-txt {
           display: block;
           margin: 0;
@@ -60,6 +63,7 @@
           color: #2f3234;
           font-family: 'ubuntu';
           font-size: 0.875rem;
-          font-weight: 300; }
+          font-weight: 300;
+          text-align: center; }
 
 /*# sourceMappingURL=bestpage.css.map */

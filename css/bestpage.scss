@@ -23,6 +23,8 @@
 
             @include phones {
                 text-align: center;
+                margin: 0;
+                padding: 0;
             }
         }
 
@@ -66,6 +68,7 @@
                 .bestpage__item-title {
                     color: #2f3234;
                     margin-bottom: rem(10px);
+                    text-align: center;
                 }
                 .bestpage__item-txt {
                     display: block;
@@ -77,6 +80,7 @@
                     font-family: 'ubuntu';
                     font-size: rem(14px);
                     font-weight: 300;
+                    text-align: center;
                 }
             }
         }   

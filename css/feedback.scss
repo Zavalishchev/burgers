@@ -17,11 +17,20 @@
         flex-direction: row;
         flex-wrap: wrap;
 
+        @include tablets {
+            height: 50%;
+        }
+
         .feedback__item {
             display: flex;
             position: relative;
             height: 50%;
             width: 25%;
+
+            @include tablets {
+                width: 50%;
+                height: 50%;
+            }
 
             .feedback__item-pict {
                 display: flex;
@@ -31,7 +40,6 @@
             }
             .feedback__item-block {
                 display: none;
-
                 
                 .feedback__item-name {
                     color: #ffffff;

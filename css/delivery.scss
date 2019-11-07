@@ -17,6 +17,10 @@
         top: 25%;
         flex-direction: column;
 
+        @include tablets {
+            top: 15%;
+        }
+
         .delivery__title-txt {
             text-align: center;
             color: #f9b43b;
@@ -31,11 +35,20 @@
             display: flex;
             flex-direction: row;
 
+            @include tablets {
+                flex-direction: column;
+                align-items: center;
+            }
+
             .orderform-address-list {
                 display: flex;
                 flex-wrap: wrap;
                 width: rem(480px);
                 height: rem(206px);
+
+                @include tablets {
+                    margin-bottom: rem(20px);
+                }
 
                 .address-list-row {
                     display: flex;

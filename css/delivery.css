@@ -13,6 +13,9 @@
     position: relative;
     top: 25%;
     flex-direction: column; }
+    @media screen and (max-width: 768px) {
+      .delivery .delivery__container {
+        top: 15%; } }
     .delivery .delivery__container .delivery__title-txt {
       text-align: center;
       color: #f9b43b;
@@ -24,11 +27,18 @@
     .delivery .delivery__container .delivery__orderform {
       display: flex;
       flex-direction: row; }
+      @media screen and (max-width: 768px) {
+        .delivery .delivery__container .delivery__orderform {
+          flex-direction: column;
+          align-items: center; } }
       .delivery .delivery__container .delivery__orderform .orderform-address-list {
         display: flex;
         flex-wrap: wrap;
         width: 30rem;
         height: 12.875rem; }
+        @media screen and (max-width: 768px) {
+          .delivery .delivery__container .delivery__orderform .orderform-address-list {
+            margin-bottom: 1.25rem; } }
         .delivery .delivery__container .delivery__orderform .orderform-address-list .address-list-row {
           display: flex;
           flex-direction: row; }

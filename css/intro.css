@@ -6,7 +6,7 @@
   justify-content: space-between;
   background-image: url("../img/background_1.png");
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: 100% 100%; }
   .intro .intro__container {
     display: flex;
     justify-content: space-between;
@@ -49,6 +49,8 @@
           background-color: #fff;
           vertical-align: middle;
           margin-top: 0.3125rem; }
+          .intro .intro__container .intro__menu .menu__list .menu__item::after + after:last-child {
+            content: none; }
     .intro .intro__container .intro__button {
       display: flex;
       margin-top: 0.8125rem;
@@ -64,28 +66,38 @@
     @media screen and (max-width: 768px) {
       .intro .intro__maincontent {
         flex-direction: column;
-        text-align: center; } }
+        text-align: center;
+        top: 0; } }
     .intro .intro__maincontent .intro__maincontent-picture {
-      display: block;
-      width: 100%;
-      height: 100%; }
+      display: flex;
+      justify-content: center; }
       .intro .intro__maincontent .intro__maincontent-picture .intro__maincontent-img {
+        display: flex;
         position: relative;
-        z-index: 2; }
+        z-index: 2;
+        max-width: 100%; }
       .intro .intro__maincontent .intro__maincontent-picture .intro__maincontent-img::after {
         content: '';
         display: block;
         position: absolute;
         z-index: -3;
-        background-image: url("./img/intro__splash.png") center center no-repeat; }
+        background-image: url("./img/intro__splash.png") center center;
+        background-repeat: no-repeat; }
   .intro .intro__maincontent-descr {
     display: flex;
     position: relative;
     flex-direction: column;
-    margin-bottom: 0.9375rem; }
+    margin-bottom: 0.9375rem;
+    max-height: 100%; }
     @media screen and (max-width: 768px) {
       .intro .intro__maincontent-descr {
         padding: 0 20%; } }
+    .intro .intro__maincontent-descr .intro__title {
+      display: flex; }
+      @media screen and (max-width: 768px) {
+        .intro .intro__maincontent-descr .intro__title {
+          margin: 0;
+          padding: 0; } }
     .intro .intro__maincontent-descr .intro__maincontent-text {
       display: block;
       padding: 0;

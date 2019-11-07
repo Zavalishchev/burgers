@@ -15,6 +15,10 @@
         top: 5%;
         left: 5%;
 
+        @include tablets {
+            display: none;
+        }
+
         .menupage__title-txt {
             color: #ffffff;
             font-family: 'gagalin';
@@ -29,11 +33,21 @@
         right: 0;
         height: 100vh;
 
+        @include tablets {
+            width: 100%;
+            display: flex;
+        }
+
         .menupage__accordeon {
             display: flex;
             flex-direction: row;
             justify-content: end;
             height: 100%;
+
+            @include tablets {
+                width: 100%;
+                display: flex;
+            }
 
             .menupage__accordeon-item {
                 display: flex;
@@ -67,7 +81,11 @@
                 .menupage__accordeon-content{
                     height: 100%;
                     overflow: hidden;
-                    width: rem(0px);
+                    width: 0;
+
+                    @include tablets {
+                        display: flex;
+                    }
 
                     .menupage__accordeon-content-text {
                         padding: rem(50px) rem(30px) 0 rem(30px);

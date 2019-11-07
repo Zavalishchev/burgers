@@ -13,11 +13,18 @@
     height: 100%;
     flex-direction: row;
     flex-wrap: wrap; }
+    @media screen and (max-width: 768px) {
+      .feedback .feedback__list {
+        height: 50%; } }
     .feedback .feedback__list .feedback__item {
       display: flex;
       position: relative;
       height: 50%;
       width: 25%; }
+      @media screen and (max-width: 768px) {
+        .feedback .feedback__list .feedback__item {
+          width: 50%;
+          height: 50%; } }
       .feedback .feedback__list .feedback__item .feedback__item-pict {
         display: flex;
         height: 100%;

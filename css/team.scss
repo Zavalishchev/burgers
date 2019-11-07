@@ -27,6 +27,10 @@
             display: block;
             padding: 15% 0 0 15%;
 
+            @include tablets {
+                padding: 10% 0;
+            }
+
             .team__title {
                 margin-bottom: rem(46px);
                 padding: 0;
@@ -40,10 +44,14 @@
                     display: block;
                     margin-bottom: rem(35px);
                     overflow: hidden;
+
+                    @include tablets {
+                        text-align: center;
+                    }
     
                     .accordeon__link {
                         display: block;
-                        font-family: gagalin;
+                        font-family: 'gagalin';
                         color: #fff;
                         margin-bottom: rem(17px);
     
@@ -56,26 +64,33 @@
                             background-image: url('../img/team-triangle.png');
                             background-repeat: no-repeat;
                         }
+                        @include tablets {
+                            font-size: rem(24px);
+                        }
                     }
 
                     .accordeon__container {
                         display: flex;
                         height: 0;
-                        overflow: hidden;
                         flex-direction: row;
 
                         @include tablets {
                             flex-direction: column;
+                            align-items: center;
                         }
 
                         .accordeon__avatar {
                             display: block;
+                            border-color: #fff;
                             margin-right: rem(20px);
-                            
-                            border:rem(1px) solid transparent;
+                            border: 1px solid transparent;
                             border-radius: 50%;
-                            overflow: hidden;
                             flex-shrink: 0;
+
+                            @include tablets {
+                                text-align: center;
+                                margin: 0;
+                            }
 
                             .accordion__avatar-img {
                                 width: rem(100px);
@@ -88,6 +103,12 @@
                             display: block;
                             width: rem(208px);
                             overflow: hidden;
+
+                            @include tablets {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                            }
 
                             .accordeon__description-title {
                                 color: #fff;

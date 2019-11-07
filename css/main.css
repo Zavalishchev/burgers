@@ -101,7 +101,7 @@ a {
   justify-content: space-between;
   background-image: url("../img/background_1.png");
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: 100% 100%; }
   .intro .intro__container {
     display: flex;
     justify-content: space-between;
@@ -144,6 +144,8 @@ a {
           background-color: #fff;
           vertical-align: middle;
           margin-top: 0.3125rem; }
+          .intro .intro__container .intro__menu .menu__list .menu__item::after + after:last-child {
+            content: none; }
     .intro .intro__container .intro__button {
       display: flex;
       margin-top: 0.8125rem;
@@ -159,28 +161,38 @@ a {
     @media screen and (max-width: 768px) {
       .intro .intro__maincontent {
         flex-direction: column;
-        text-align: center; } }
+        text-align: center;
+        top: 0; } }
     .intro .intro__maincontent .intro__maincontent-picture {
-      display: block;
-      width: 100%;
-      height: 100%; }
+      display: flex;
+      justify-content: center; }
       .intro .intro__maincontent .intro__maincontent-picture .intro__maincontent-img {
+        display: flex;
         position: relative;
-        z-index: 2; }
+        z-index: 2;
+        max-width: 100%; }
       .intro .intro__maincontent .intro__maincontent-picture .intro__maincontent-img::after {
         content: '';
         display: block;
         position: absolute;
         z-index: -3;
-        background-image: url("./img/intro__splash.png") center center no-repeat; }
+        background-image: url("./img/intro__splash.png") center center;
+        background-repeat: no-repeat; }
   .intro .intro__maincontent-descr {
     display: flex;
     position: relative;
     flex-direction: column;
-    margin-bottom: 0.9375rem; }
+    margin-bottom: 0.9375rem;
+    max-height: 100%; }
     @media screen and (max-width: 768px) {
       .intro .intro__maincontent-descr {
         padding: 0 20%; } }
+    .intro .intro__maincontent-descr .intro__title {
+      display: flex; }
+      @media screen and (max-width: 768px) {
+        .intro .intro__maincontent-descr .intro__title {
+          margin: 0;
+          padding: 0; } }
     .intro .intro__maincontent-descr .intro__maincontent-text {
       display: block;
       padding: 0;
@@ -281,7 +293,9 @@ a {
       color: #2f3234; }
       @media screen and (max-width: 480px) {
         .bestpage .bestpage__container .bestpage__title-text {
-          text-align: center; } }
+          text-align: center;
+          margin: 0;
+          padding: 0; } }
     .bestpage .bestpage__container .bestpage__list {
       display: flex;
       justify-content: space-between;
@@ -313,7 +327,8 @@ a {
             margin-bottom: 0.625rem; }
         .bestpage .bestpage__container .bestpage__list .bestpage__item .bestpage__item-title {
           color: #2f3234;
-          margin-bottom: 0.625rem; }
+          margin-bottom: 0.625rem;
+          text-align: center; }
         .bestpage .bestpage__container .bestpage__list .bestpage__item .bestpage__item-txt {
           display: block;
           margin: 0;
@@ -323,7 +338,8 @@ a {
           color: #2f3234;
           font-family: 'ubuntu';
           font-size: 0.875rem;
-          font-weight: 300; }
+          font-weight: 300;
+          text-align: center; }
 
 .ingredients {
   display: flex;
@@ -525,6 +541,9 @@ a {
     .team .team__container .team__container-wrap {
       display: block;
       padding: 15% 0 0 15%; }
+      @media screen and (max-width: 768px) {
+        .team .team__container .team__container-wrap {
+          padding: 10% 0; } }
       .team .team__container .team__container-wrap .team__title {
         margin-bottom: 2.875rem;
         padding: 0; }
@@ -535,9 +554,12 @@ a {
           display: block;
           margin-bottom: 2.1875rem;
           overflow: hidden; }
+          @media screen and (max-width: 768px) {
+            .team .team__container .team__container-wrap .accordeon .accordeon__item {
+              text-align: center; } }
           .team .team__container .team__container-wrap .accordeon .accordeon__item .accordeon__link {
             display: block;
-            font-family: gagalin;
+            font-family: 'gagalin';
             color: #fff;
             margin-bottom: 1.0625rem; }
             .team .team__container .team__container-wrap .accordeon .accordeon__item .accordeon__link:before {
@@ -548,21 +570,28 @@ a {
               height: 0.5625rem;
               background-image: url("../img/team-triangle.png");
               background-repeat: no-repeat; }
+            @media screen and (max-width: 768px) {
+              .team .team__container .team__container-wrap .accordeon .accordeon__item .accordeon__link {
+                font-size: 1.5rem; } }
           .team .team__container .team__container-wrap .accordeon .accordeon__item .accordeon__container {
             display: flex;
             height: 0;
-            overflow: hidden;
             flex-direction: row; }
             @media screen and (max-width: 768px) {
               .team .team__container .team__container-wrap .accordeon .accordeon__item .accordeon__container {
-                flex-direction: column; } }
+                flex-direction: column;
+                align-items: center; } }
             .team .team__container .team__container-wrap .accordeon .accordeon__item .accordeon__container .accordeon__avatar {
               display: block;
+              border-color: #fff;
               margin-right: 1.25rem;
-              border: 0.0625rem solid transparent;
+              border: 1px solid transparent;
               border-radius: 50%;
-              overflow: hidden;
               flex-shrink: 0; }
+              @media screen and (max-width: 768px) {
+                .team .team__container .team__container-wrap .accordeon .accordeon__item .accordeon__container .accordeon__avatar {
+                  text-align: center;
+                  margin: 0; } }
               .team .team__container .team__container-wrap .accordeon .accordeon__item .accordeon__container .accordeon__avatar .accordion__avatar-img {
                 width: 6.25rem;
                 height: 6.25rem;
@@ -571,6 +600,11 @@ a {
               display: block;
               width: 13rem;
               overflow: hidden; }
+              @media screen and (max-width: 768px) {
+                .team .team__container .team__container-wrap .accordeon .accordeon__item .accordeon__container .accordeon__description {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center; } }
               .team .team__container .team__container-wrap .accordeon .accordeon__item .accordeon__container .accordeon__description .accordeon__description-title {
                 color: #fff;
                 margin-bottom: 0.9375rem;
@@ -605,6 +639,9 @@ a {
     position: relative;
     top: 5%;
     left: 5%; }
+    @media screen and (max-width: 768px) {
+      .menupage .menupage__title {
+        display: none; } }
     .menupage .menupage__title .menupage__title-txt {
       color: #ffffff;
       font-family: 'gagalin';
@@ -615,11 +652,19 @@ a {
     display: block;
     right: 0;
     height: 100vh; }
+    @media screen and (max-width: 768px) {
+      .menupage .menupage__container {
+        width: 100%;
+        display: flex; } }
     .menupage .menupage__container .menupage__accordeon {
       display: flex;
       flex-direction: row;
       justify-content: end;
       height: 100%; }
+      @media screen and (max-width: 768px) {
+        .menupage .menupage__container .menupage__accordeon {
+          width: 100%;
+          display: flex; } }
       .menupage .menupage__container .menupage__accordeon .menupage__accordeon-item {
         display: flex;
         flex-direction: row; }
@@ -647,7 +692,10 @@ a {
         .menupage .menupage__container .menupage__accordeon .menupage__accordeon-item .menupage__accordeon-content {
           height: 100%;
           overflow: hidden;
-          width: 0rem; }
+          width: 0; }
+          @media screen and (max-width: 768px) {
+            .menupage .menupage__container .menupage__accordeon .menupage__accordeon-item .menupage__accordeon-content {
+              display: flex; } }
           .menupage .menupage__container .menupage__accordeon .menupage__accordeon-item .menupage__accordeon-content .menupage__accordeon-content-text {
             padding: 3.125rem 1.875rem 0 1.875rem;
             color: #fff;
@@ -674,11 +722,18 @@ a {
     height: 100%;
     flex-direction: row;
     flex-wrap: wrap; }
+    @media screen and (max-width: 768px) {
+      .feedback .feedback__list {
+        height: 50%; } }
     .feedback .feedback__list .feedback__item {
       display: flex;
       position: relative;
       height: 50%;
       width: 25%; }
+      @media screen and (max-width: 768px) {
+        .feedback .feedback__list .feedback__item {
+          width: 50%;
+          height: 50%; } }
       .feedback .feedback__list .feedback__item .feedback__item-pict {
         display: flex;
         height: 100%;
@@ -728,6 +783,9 @@ a {
     position: relative;
     top: 25%;
     flex-direction: column; }
+    @media screen and (max-width: 768px) {
+      .delivery .delivery__container {
+        top: 15%; } }
     .delivery .delivery__container .delivery__title-txt {
       text-align: center;
       color: #f9b43b;
@@ -739,11 +797,18 @@ a {
     .delivery .delivery__container .delivery__orderform {
       display: flex;
       flex-direction: row; }
+      @media screen and (max-width: 768px) {
+        .delivery .delivery__container .delivery__orderform {
+          flex-direction: column;
+          align-items: center; } }
       .delivery .delivery__container .delivery__orderform .orderform-address-list {
         display: flex;
         flex-wrap: wrap;
         width: 30rem;
         height: 12.875rem; }
+        @media screen and (max-width: 768px) {
+          .delivery .delivery__container .delivery__orderform .orderform-address-list {
+            margin-bottom: 1.25rem; } }
         .delivery .delivery__container .delivery__orderform .orderform-address-list .address-list-row {
           display: flex;
           flex-direction: row; }
