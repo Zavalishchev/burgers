@@ -15,7 +15,7 @@
     flex-direction: column; }
     @media screen and (max-width: 768px) {
       .delivery .delivery__container {
-        top: 15%; } }
+        top: 0; } }
     .delivery .delivery__container .delivery__title-txt {
       text-align: center;
       color: #f9b43b;
@@ -70,8 +70,6 @@
         .delivery .delivery__container .delivery__orderform .orderform-additional-list .additional-list-row {
           display: flex;
           flex-direction: row; }
-          .delivery .delivery__container .delivery__orderform .orderform-additional-list .additional-list-row .additional-container {
-            margin-right: 1.25rem; }
           .delivery .delivery__container .delivery__orderform .orderform-additional-list .additional-list-row .additional-item {
             display: block;
             margin-bottom: 1.25rem; }

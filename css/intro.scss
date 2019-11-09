@@ -95,6 +95,12 @@
             flex-direction: column;
             text-align: center;
             top: 0;
+            padding: 0 23%;
+        }
+
+        @include phones {
+            top: 0;
+            padding: 0 12%;
         }
 
         .intro__maincontent-picture {
@@ -132,10 +138,15 @@
 
         .intro__title {
             display: flex;
+            text-align: center;
 
             @include tablets {
                 margin: 0;
                 padding: 0;
+                font-size: rem(70px);
+            }
+            @include phones {
+                font-size: rem(65px);
             }
         }
         
@@ -149,6 +160,13 @@
             letter-spacing: rem(-1.63px);
             font-size: rem(65px);
             line-height: rem(60px);
+
+            @include tablets {
+                font-size: rem(63px);
+            }
+            @include phones {
+                font-size: rem(54px);
+            }
         }
     }
 

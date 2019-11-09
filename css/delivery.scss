@@ -18,7 +18,7 @@
         flex-direction: column;
 
         @include tablets {
-            top: 15%;
+            top: 0;
         }
 
         .delivery__title-txt {
@@ -94,10 +94,6 @@
                 .additional-list-row {
                     display: flex;
                     flex-direction: row;
-
-                    .additional-container {
-                        margin-right: rem(20px);
-                    }
 
                     .additional-item {
                         display: block;
