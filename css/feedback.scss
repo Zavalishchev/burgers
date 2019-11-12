@@ -57,6 +57,11 @@
                     opacity: 1;
                     font-weight: 300; 
                     padding-bottom: rem(20px);
+
+                    @include phones {
+                        line-height: rem(18px);
+                    }
+                    
                 }
                 .feedback_button {
                     background-color: #2f3234;
@@ -72,6 +77,11 @@
             width: 100%;
             height: 100%;
             box-sizing: border-box;
+
+            @include phones {
+                padding: rem(5px);
+            }
         }
+        
     }
 }

@@ -54,20 +54,23 @@
 
                 .bestpage__item-container-img {
                     display: flex;
+                    position: relative;
                     align-items: center;
                     margin-bottom: rem(10px);
 
                     @include phones {
                         margin-right: rem(5px);
+                        max-width: rem(200px);
                     }
 
                     .bestpage__item-pict {
-                        display: flex;
                         text-align: center;
                         margin-bottom: rem(10px);
-                    }
 
-                    
+                        @include phones {
+                            max-width: rem(200px);
+                        }
+                    }   
                 }
 
                 .bestpage__item-container {

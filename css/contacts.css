@@ -36,6 +36,9 @@
         position: relative;
         margin-top: 1.25rem;
         margin-right: 0.625rem; }
+        @media screen and (max-width: 480px) {
+          .contacts .footer .footer__container .footer__social {
+            margin-bottom: 1.875rem; } }
         .contacts .footer .footer__container .footer__social .social-list {
           display: flex;
           flex-direction: row; }

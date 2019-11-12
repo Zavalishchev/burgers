@@ -10,12 +10,17 @@
   justify-content: center; }
   .delivery .delivery__container {
     display: flex;
+    flex-wrap: wrap;
     position: relative;
     top: 25%;
     flex-direction: column; }
     @media screen and (max-width: 768px) {
       .delivery .delivery__container {
         top: 0; } }
+    @media screen and (max-width: 480px) {
+      .delivery .delivery__container {
+        width: 100%;
+        padding: 0 5%; } }
     .delivery .delivery__container .delivery__title-txt {
       text-align: center;
       color: #f9b43b;
@@ -24,8 +29,12 @@
       font-weight: 400;
       text-transform: uppercase;
       margin-bottom: 2.5rem; }
+      @media screen and (max-width: 480px) {
+        .delivery .delivery__container .delivery__title-txt {
+          text-align: left; } }
     .delivery .delivery__container .delivery__orderform {
       display: flex;
+      position: relative;
       flex-direction: row; }
       @media screen and (max-width: 768px) {
         .delivery .delivery__container .delivery__orderform {
@@ -59,10 +68,19 @@
               border-style: none;
               padding-left: 0.625rem;
               outline-color: #f9b43b; }
+              @media screen and (max-width: 480px) {
+                .delivery .delivery__container .delivery__orderform .orderform-address-list .address-list-row .address-item .address-item-autorization {
+                  width: 11.25rem; } }
             .delivery .delivery__container .delivery__orderform .orderform-address-list .address-list-row .address-item .street {
               width: 28.75rem; }
+              @media screen and (max-width: 480px) {
+                .delivery .delivery__container .delivery__orderform .orderform-address-list .address-list-row .address-item .street {
+                  width: 23.75rem; } }
             .delivery .delivery__container .delivery__orderform .orderform-address-list .address-list-row .address-item .apartment {
               width: 6.25rem; }
+              @media screen and (max-width: 480px) {
+                .delivery .delivery__container .delivery__orderform .orderform-address-list .address-list-row .address-item .apartment {
+                  width: 5rem; } }
       .delivery .delivery__container .delivery__orderform .orderform-additional-list {
         display: flex;
         flex-wrap: wrap;
@@ -87,6 +105,9 @@
               padding-left: 0.625rem;
               padding-top: 0.3125rem;
               outline-color: #f9b43b; }
+              @media screen and (max-width: 480px) {
+                .delivery .delivery__container .delivery__orderform .orderform-additional-list .additional-list-row .additional-item .additional-item-autorization {
+                  width: 23.75rem; } }
             .delivery .delivery__container .delivery__orderform .orderform-additional-list .additional-list-row .additional-item .additional-radio {
               margin: 0;
               margin-right: 0.625rem;

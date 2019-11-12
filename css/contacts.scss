@@ -46,6 +46,10 @@
                 position: relative;
                 margin-top: rem(20px);
                 margin-right: rem(10px);
+
+                @include phones {
+                    margin-bottom: rem(30px);
+                }
     
                 .social-list {
                     display: flex;

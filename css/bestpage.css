@@ -43,15 +43,19 @@
             margin-bottom: 0.4375rem; } }
         .bestpage .bestpage__container .bestpage__list .bestpage__item .bestpage__item-container-img {
           display: flex;
+          position: relative;
           align-items: center;
           margin-bottom: 0.625rem; }
           @media screen and (max-width: 480px) {
             .bestpage .bestpage__container .bestpage__list .bestpage__item .bestpage__item-container-img {
-              margin-right: 0.3125rem; } }
+              margin-right: 0.3125rem;
+              max-width: 12.5rem; } }
           .bestpage .bestpage__container .bestpage__list .bestpage__item .bestpage__item-container-img .bestpage__item-pict {
-            display: flex;
             text-align: center;
             margin-bottom: 0.625rem; }
+            @media screen and (max-width: 480px) {
+              .bestpage .bestpage__container .bestpage__list .bestpage__item .bestpage__item-container-img .bestpage__item-pict {
+                max-width: 12.5rem; } }
         .bestpage .bestpage__container .bestpage__list .bestpage__item .bestpage__item-container {
           display: flex;
           flex-direction: column; }
