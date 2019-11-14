@@ -36,7 +36,7 @@
       @media screen and (max-width: 768px) {
         .menupage .menupage__container .menupage__accordeon {
           width: 100%;
-          display: flex; } }
+          justify-content: end; } }
       .menupage .menupage__container .menupage__accordeon .menupage__accordeon-item {
         display: flex;
         flex-direction: row; }
@@ -44,10 +44,12 @@
           display: block;
           position: relative;
           width: 5rem;
-          height: 100%;
           background-size: cover;
           background-position: center center;
           background-repeat: no-repeat; }
+          @media screen and (max-width: 480px) {
+            .menupage .menupage__container .menupage__accordeon .menupage__accordeon-item .menupage__accordeon-link {
+              width: 4.0625rem; } }
           .menupage .menupage__container .menupage__accordeon .menupage__accordeon-item .menupage__accordeon-link .menupage__accordeon-link-text {
             position: absolute;
             margin-top: -1.25rem;
@@ -64,7 +66,8 @@
         .menupage .menupage__container .menupage__accordeon .menupage__accordeon-item .menupage__accordeon-content {
           height: 100%;
           overflow: hidden;
-          width: 0; }
+          width: 0;
+          background: rgba(47, 50, 52, 0.93); }
           @media screen and (max-width: 768px) {
             .menupage .menupage__container .menupage__accordeon .menupage__accordeon-item .menupage__accordeon-content {
               display: flex; } }
@@ -74,9 +77,19 @@
             font-family: 'ubuntu';
             font-weight: 300;
             line-height: 2; }
+            @media screen and (max-width: 480px) {
+              .menupage .menupage__container .menupage__accordeon .menupage__accordeon-item .menupage__accordeon-content .menupage__accordeon-content-text {
+                padding: 3%;
+                line-height: 1; } }
         .menupage .menupage__container .menupage__accordeon .menupage__accordeon-item.active .menupage__accordeon-content {
           width: 33.75rem;
           background: #363636;
           opacity: .9; }
+          @media screen and (max-width: 768px) {
+            .menupage .menupage__container .menupage__accordeon .menupage__accordeon-item.active .menupage__accordeon-content {
+              width: 18.75rem; } }
+          @media screen and (max-width: 480px) {
+            .menupage .menupage__container .menupage__accordeon .menupage__accordeon-item.active .menupage__accordeon-content {
+              width: 9.375rem; } }
 
 /*# sourceMappingURL=menupage.css.map */

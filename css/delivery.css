@@ -31,10 +31,10 @@
       margin-bottom: 2.5rem; }
       @media screen and (max-width: 480px) {
         .delivery .delivery__container .delivery__title-txt {
-          text-align: left; } }
+          text-align: left;
+          font-size: 3.75rem; } }
     .delivery .delivery__container .delivery__orderform {
       display: flex;
-      position: relative;
       flex-direction: row; }
       @media screen and (max-width: 768px) {
         .delivery .delivery__container .delivery__orderform {
@@ -70,17 +70,17 @@
               outline-color: #f9b43b; }
               @media screen and (max-width: 480px) {
                 .delivery .delivery__container .delivery__orderform .orderform-address-list .address-list-row .address-item .address-item-autorization {
-                  width: 11.25rem; } }
+                  width: 9.375rem; } }
             .delivery .delivery__container .delivery__orderform .orderform-address-list .address-list-row .address-item .street {
               width: 28.75rem; }
               @media screen and (max-width: 480px) {
                 .delivery .delivery__container .delivery__orderform .orderform-address-list .address-list-row .address-item .street {
-                  width: 23.75rem; } }
+                  width: 20rem; } }
             .delivery .delivery__container .delivery__orderform .orderform-address-list .address-list-row .address-item .apartment {
               width: 6.25rem; }
               @media screen and (max-width: 480px) {
                 .delivery .delivery__container .delivery__orderform .orderform-address-list .address-list-row .address-item .apartment {
-                  width: 5rem; } }
+                  width: 4.0625rem; } }
       .delivery .delivery__container .delivery__orderform .orderform-additional-list {
         display: flex;
         flex-wrap: wrap;
@@ -104,10 +104,11 @@
               border-style: none;
               padding-left: 0.625rem;
               padding-top: 0.3125rem;
-              outline-color: #f9b43b; }
+              outline-color: #f9b43b;
+              resize: none; }
               @media screen and (max-width: 480px) {
                 .delivery .delivery__container .delivery__orderform .orderform-additional-list .additional-list-row .additional-item .additional-item-autorization {
-                  width: 23.75rem; } }
+                  width: 20rem; } }
             .delivery .delivery__container .delivery__orderform .orderform-additional-list .additional-list-row .additional-item .additional-radio {
               margin: 0;
               margin-right: 0.625rem;

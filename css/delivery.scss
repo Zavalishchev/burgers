@@ -38,12 +38,12 @@
 
             @include phones {
                 text-align: left;
+                font-size: rem(60px);
             }
         }
 
         .delivery__orderform {
             display: flex;
-            position: relative;
             flex-direction: row;
 
             @include tablets {
@@ -52,7 +52,7 @@
             }
 
             @include phones {
-                //display: block;
+                
             }
 
             .orderform-address-list {
@@ -91,7 +91,7 @@
                             outline-color: #f9b43b;
 
                             @include phones {
-                                width: rem(180px);
+                                width: rem(150px);
                             }
                         }
     
@@ -99,14 +99,14 @@
                             width: rem(460px);
 
                             @include phones {
-                                width: rem(380px);
+                                width: rem(320px);
                             }
                         }
                         .apartment {
                             width: rem(100px);
 
                             @include phones {
-                                width: rem(80px);
+                                width: rem(65px);
                             }
                         }
                     }
@@ -142,9 +142,10 @@
                             padding-left: rem(10px);
                             padding-top: rem(5px);
                             outline-color: #f9b43b;
+                            resize: none;
 
                             @include phones {
-                                width: rem(380px);
+                                width: rem(320px);
                             }
                         }
     
