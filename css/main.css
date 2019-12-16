@@ -96,6 +96,7 @@ a {
 .intro {
   display: flex;
   width: 100%;
+  margin: 0;
   flex-direction: column;
   height: 100vh;
   justify-content: space-between;
@@ -104,7 +105,7 @@ a {
   background-size: 100% 100%; }
   .intro .intro__container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding-top: 0.75rem;
     flex-direction: row; }
     .intro .intro__container .intro__logo {
@@ -144,8 +145,8 @@ a {
           background-color: #fff;
           vertical-align: middle;
           margin-top: 0.3125rem; }
-          .intro .intro__container .intro__menu .menu__list .menu__item::after + after:last-child {
-            content: none; }
+        .intro .intro__container .intro__menu .menu__list + after:last-child {
+          display: none; }
     .intro .intro__container .intro__button {
       display: flex;
       margin-top: 0.8125rem;

@@ -3,6 +3,7 @@
 .intro {
     display: flex;
     width: 100%;
+    margin: 0;
     flex-direction: column;
     height: 100vh;
     justify-content: space-between;
@@ -12,7 +13,7 @@
 
     .intro__container {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         padding-top: rem(12px);
         flex-direction: row;
 
@@ -65,11 +66,10 @@
                     background-color: #fff;
                     vertical-align: middle;
                     margin-top: rem(5px);
-
-                    +after:last-child {
-                        content: none;
-                    }
                 }  
+                + after:last-child {
+                    display: none;
+                }
             }
         }   
 
