@@ -8,100 +8,92 @@
     background-image: url('../img/backgrounf_2.png');
     background-repeat: no-repeat;
     background-size: cover;
+}
 
-    .bestpage__container {
-        display: flex;
-        vertical-align: middle;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+.bestpage__container {
+    display: flex;
+    vertical-align: middle;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-        .bestpage__title-text {
-            display: block;
-            margin: rem(133px) 0 rem(20px) 0;
-            color: #2f3234;
+.bestpage__title-text {
+    display: block;
+    margin: rem(133px) 0 rem(20px) 0;
+    color: #2f3234;
 
-            @include phones {
-                text-align: center;
-                margin: 0;
-                padding: 0;
-            }
-        }
-
-        .bestpage__list {
-            display: flex;
-            justify-content: space-between;
-            margin: 0;
-            padding: 0;
-            flex-direction: row;
-
-            @include phones {
-                flex-direction: column;
-                width: rem(350px);
-                text-align: center;
-            }
-
-            .bestpage__item {
-                display: flex;
-                align-items: center;
-                flex: 1;
-                flex-direction: column;
-                
-                @include phones {
-                    flex-direction: row;
-                    margin-bottom: rem(7px);
-                }
-
-                .bestpage__item-container-img {
-                    display: flex;
-                    position: relative;
-                    align-items: center;
-                    margin-bottom: rem(10px);
-
-                    @include phones {
-                        margin-right: rem(5px);
-                        max-width: rem(200px);
-                    }
-
-                    .bestpage__item-pict {
-                        text-align: center;
-                        margin-bottom: rem(10px);
-
-                        @include phones {
-                            max-width: rem(200px);
-                        }
-                    }   
-                }
-
-                .bestpage__item-container {
-                    display: flex;
-                    flex-direction: column;
-
-                    .bestpage__item-title {
-                        color: #2f3234;
-                        margin-bottom: rem(10px);
-                        text-align: center;
-                    }
-                    .bestpage__item-txt {
-                        display: block;
-                        margin: 0;
-                        padding: 0 rem(10px);
-                        align-self: flex-end;
-                        opacity: 0.8;
-                        color: #2f3234;
-                        font-family: 'ubuntu';
-                        font-size: rem(14px);
-                        font-weight: 300;
-                        text-align: center;
-
-                        @include phones {
-                            text-align: left;
-                        }
-                    }
-                }
-                
-                
-            }
-        }   
+    @include phones {
+        text-align: center;
+        margin: 0;
+        padding: 0;
     }
+}
+
+.bestpage__list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    flex-direction: row;
+
+    @include phones {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+.bestpage__item {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    flex-direction: column;
+                
+    @include phones {
+        flex-direction: row;
+        margin-bottom: rem(20px);
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+    }
+}
+
+.bestpage__item-container-img {
+    display: flex;
+    position: relative;
+    align-items: center;
+
+    @include phones {
+        margin-right: rem(10px);
+        min-width: rem(110px);
+    }
+}
+
+.bestpage__item-pict {
+    text-align: center;
+
+    @include phones {
+        max-width: rem(200px);
+    }
+}   
+
+.bestpage__item-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.bestpage__item-title {
+    color: #2f3234;
+    margin-bottom: rem(10px);
+    text-align: center;
+}
+.bestpage__item-txt {
+    display: block;
+    margin: 0;
+    text-align: left;
+    opacity: 0.8;
+    color: #2f3234;
+    font-family: 'ubuntu';
+    font-size: rem(14px);
+    font-weight: 300;
 }

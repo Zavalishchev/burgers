@@ -54,11 +54,7 @@
                 </div>
 
                 <div class="intro__button">
-                    <button class="button intr__button">заказать</button>
-                
-                    <div class="hamburger">
-                        <a href="" class="hamburger__menu"></a>
-                    </div>
+                    <button class="button intr__button">заказать</button> 
                 </div>  
             </header>
 
@@ -119,56 +115,49 @@
         </section>
 
         <section class="ingredients">
-            <div class="ingredients__container container">
-                <div class="ingridients__arrowleft">
-                    <a href="#" class="ingridients__arrowleft-link">
-                        <img src="./img/arrow-scroll.png" alt="" class="ingridients__arrowleft-img">
-                    </a>
-                </div>
+            <div class="ingredients__container">
+
+                <a href="#" class="ingridients__arrowlink">
+                    <img src="./img/arrow-scroll.png" alt="" class="ingridients__arrow-img">
+                </a>
 
                 <div class="ingridients__main">
 
                     <div class="ingridients__main-pictures">
+                        <a href="#" class="main__pictures-link">
+                            <img src="./img/ingrid_components-img.png" alt="" class="main__pictures-img">
+                            <h3 class="main__pictures-txt">состав</h3>
+                        </a>
 
-                        <div class="ingridients__main-components">
-                            <a href="#" class="ingridients__main-components-link">
-                                <img src="./img/ingrid_components-img.png" alt="" class="ingridients__main-components-img">
-                                <p class="ingridients__main-components-txt">состав</p>
-                            </a>
+                        <div class="ingridients__main-burger">
+                            <img src="./img/ingrid__burger.png" alt="" class="ingridients__main-burger-img">
                         </div>
-
-                        <img src="./img/ingrid__burger.png" alt="" class="ingridients__main-burger">
 
                         <div class="ingridients__main-kkal">
-                            <img src="./img/ingrid__kkal.png" alt="" class="ingridients__main-kkal-img">
-                            <p class="ingridients__main-kkal-txt">ккал</p>
+                            <img src="./img/ingrid__kkal.png" alt="" class="main__kkal-img">
+                            <h3 class="main__pictures-txt opacity_mod">ккал</h3>
                         </div>
-
                     </div>
 
                     <div class="ingridients__main-description">
-                        <p class="ingridients__main-description-title">dark beef burger</p>
+                        <h1 class="ingridients__main-description-title">dark beef burger</h1>
                         <p class="ingridients__main-description-txt">
                             Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, 
                             тремя кусочками нежнейшего сыра эмменталь, 
                             двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
                         </p>
                         <div class="ingridients__main-description-container">
-                            <p class="ingridients__main-description-price"> 
-                                500 <p class="ingridients__main-description-rub">
-                                        рублей
-                                    </p> 
-                            </p>
-                            <input class="ingridients__main-description-button" type="submit" value="ЗАКАЗАТЬ">
+                            <h2 class="ingridients__main-description-price"> 500 </h2> <h5 class="ingridients__main-description-price description__price"> рублей </h5>
+                            <input class="ingridients__main-description-button" type="button" value="ЗАКАЗАТЬ">
                         </div>
                     </div>
+
                 </div>
 
-                <div class="ingridients__arrowright">
-                    <a href="#" class="ingridients__arrowright-link">
-                        <img src="./img/arrow-scroll.png" alt="" class="ingridients__arrowright-img">
-                    </a>
-                </div>
+                <a href="#" class="ingridients__arrowlink left">
+                    <img src="./img/arrow-scroll.png" alt="" class="ingridients__arrow-img">
+                </a>
+                    
             </div>
         </section>
 
@@ -250,7 +239,7 @@
             <div class="menupage__container">
                 <ul class="menupage__accordeon">
                     <li class="menupage__accordeon-item ">
-                        <a href="#" class="menupage__accordeon-link" style="background-image: url('./img/background_1.png')">
+                        <a href="#" class="menupage__accordeon-link" style="background-image: url('./img/background_eatmeat.png')">
                             <div class="menupage__accordeon-link-text">для мясоедов</div>
                         </a>
                         <div class="menupage__accordeon-content">
@@ -406,64 +395,64 @@
                         <div class="address-list-row">
                             <label class="address-item">
                                 <h6 class="address-item-title">Улица</h6>
-                                <input type="textarea" class="address-item-autorization street">
+                                <input type="textarea" class="address-item-autorization">
                             </label>
                         </div>
 
                         <div class="address-list-row">
                             <label class="address-item">
                                 <h6 class="address-item-title">Дом</h6>
-                                <input type="textarea" class="address-item-autorization apartment">
+                                <input type="textarea" class="address-item-autorization">
                             </label>
     
                             <label class="address-item">
                                 <h6 class="address-item-title">Корпус</h6>
-                                <input type="textarea" class="address-item-autorization apartment">
+                                <input type="textarea" class="address-item-autorization">
                             </label>
     
                             <label class="address-item">
                                 <h6 class="address-item-title">Квартира</h6>
-                                <input type="textarea" class="address-item-autorization apartment">
+                                <input type="textarea" class="address-item-autorization">
                             </label>
                             
                             <label class="address-item">
                                 <h6 class="address-item-title">Этаж</h6>
-                                <input type="textarea" class="address-item-autorization apartment">
+                                <input type="textarea" class="address-item-autorization">
                             </label>
                         </div>
                     </div>
 
-                    <div class="orderform-additional-list">
-                        <div class="additional-list-row">
-                            <label class="additional-item">
-                                <h6 class="additional-title">Комментарий</h6>
+                    <div class="orderform-address-list">
+                        <div class="address-list-row">
+                            <label class="address-item">
+                                <h6 class="address-item-title">Комментарий</h6>
                                 <textarea class="additional-item-autorization"></textarea>
                             </label>
                         </div>
 
-                        <div class="additional-list-row">
-                            <label class="additional-item">
+                        <div class="address-list-row">
+                            <label class="address-item">
                                 <input class="additional-radio" type="radio" name="payment">
                                 <span class="radio__idicator"></span>
                                 <span class="additional-radio-txt">Потребуется сдача</span> 
                             </label>
-                            <label class="additional-item"> 
+                            <label class="address-item"> 
                                 <input class="additional-radio" type="radio" name="payment" checked> 
                                 <span class="radio__idicator"></span>
                                 <span class="additional-radio-txt">Оплата по карте</span>
                             </label>
                         </div>
 
-                        <div class="additional-list-row">
-                            <label class="additional-item">
+                        <div class="address-list-row">
+                            <label class="address-item">
                                 <input class="additional-check" type="checkbox">
                                 <span class="checkbox__indicator"></span>
                                 <span class="additional-radio-txt check">Не перезванивать</span>
                             </label>
                         </div>
 
-                        <div class="additional-list-row">
-                            <label class="additional-item">
+                        <div class="address-list-row">
+                            <label class="address-item">
                                 <div class="additional-submit-container">
                                     <input class="additional-submit" type="submit" value="ЗАКАЗАТЬ">
                                     <a href="#" class="additional-radio-txt">Очистить</a>
@@ -478,7 +467,7 @@
             
         <section class="contacts">
             <footer class="footer">
-                <div class="footer__container container">
+                <div class="footer__container ">
                     <div class="contacts__address">
                         <h6 class="contacts__address-title">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</h6>
                         <a href="tel:+78123771377" class="contacts__telephone">+7 (812) 377-13-77</a>
@@ -568,6 +557,10 @@
                 </li>
             </ul>
         </nav>
+
+        <div class="hamburger">
+            <a href="" class="hamburger__menu"></a>
+        </div>
 
     </div>
 </body>

@@ -8,77 +8,92 @@
     background-image: url('../img/background__map.png');
     background-repeat: no-repeat;
     background-size: cover;
+}
 
-    .footer {
-        position: absolute;
-        background-color: #111111;
-        bottom: 0;
-        width: 100%;
+.footer {
+    position: absolute;
+    background-color: #111111;
+    bottom: 0;
+    width: 100%;
+}
     
-        .footer__container {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            flex-wrap: wrap;
-    
-            .contacts__address {
-                display: block;
-                position: relative;
-                margin: rem(10px);
-    
-                .contacts__address-title {
-                    margin: 0;
-                    color: #ffffff;
-                    font-family: 'ubuntu';
-                    font-size: rem(14px);
-                    font-weight: 300;
-                    padding-bottom: rem(5px);
-                }
-                .contacts__telephone {
-                    font-family: 'ubuntu';
-                    color: #e45028;
-                    font-weight: 700;
-                }
-            }
-    
-            .footer__social {
-                display: flex;
-                position: relative;
-                margin-top: rem(20px);
-                margin-right: rem(10px);
+.footer__container {
+    display: flex;
+    margin: rem(10px) rem(30px);
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
 
-                @include phones {
-                    margin-bottom: rem(30px);
-                }
-    
-                .social-list {
-                    display: flex;
-                    flex-direction: row;
-    
-                    .social-item {
-                        display: block;
-                        margin-right: rem(20px);
-                        width: rem(23px);
-                        height: rem(23px);
-
-    
-                        .social-link {
-                            justify-content: center;
-                            align-content: center;
-                        }
-    
-                        .social-link:hover {
-                            .contacts__social-img {
-                                opacity: 0.5;
-                            }
-                        }
-                    }
-
-                    .social-item:last-child {
-                        margin: 0;
-                    }
-                }
-            }
-        }
+    @include phones {
+        justify-content: center;
     }
+}
+.contacts__address {
+    display: block;
+    position: relative;
+
+    @include tablets {
+        margin-right: rem(10px);
+    }
+
+    @include phones {
+        margin-bottom: rem(15px);
+        text-align: center;
+    }
+}
+.contacts__address-title {
+    margin: 0;
+    color: #ffffff;
+    font-family: 'ubuntu';
+    font-size: rem(14px);
+    font-weight: 300;
+    padding-bottom: rem(5px);
+
+    @include phones {
+        text-align: center;  
+    }
+}
+.contacts__telephone {
+    font-family: 'ubuntu';
+    color: #e45028;
+    font-weight: 700;
+
+    @include phones {
+        justify-content: center;  
+    }
+}
+    
+.footer__social {
+    display: flex;
+    position: relative;
+    padding-top: rem(5px);
+
+    @include phones {
+        margin-bottom: rem(30px);
+        padding: 0;
+    }
+}
+.social-list {
+    display: flex;
+    flex-direction: row;
+}    
+.social-item {
+    display: block;
+    margin-right: rem(20px);
+    width: rem(23px);
+    height: rem(23px);
+}
+    
+.social-link {
+    justify-content: center;
+    align-content: center;
+}
+    
+.social-link:hover {
+    .contacts__social-img {
+        opacity: 0.5;
+    }
+}
+.social-item:last-child {
+    margin: 0;
 }

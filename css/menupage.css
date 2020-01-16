@@ -6,90 +6,114 @@
   background-image: url("../img/background_menu.png");
   background-repeat: no-repeat;
   background-size: cover; }
-  .menupage .menupage__title {
-    display: flex;
-    position: relative;
-    top: 5%;
-    left: 5%; }
-    @media screen and (max-width: 768px) {
-      .menupage .menupage__title {
-        display: none; } }
-    .menupage .menupage__title .menupage__title-txt {
-      color: #ffffff;
-      font-family: 'gagalin';
-      font-size: 4.5rem;
-      font-weight: 400; }
-  .menupage .menupage__container {
-    position: absolute;
-    display: block;
-    right: 0;
-    height: 100vh; }
-    @media screen and (max-width: 768px) {
-      .menupage .menupage__container {
-        width: 100%;
-        display: flex; } }
-    .menupage .menupage__container .menupage__accordeon {
-      display: flex;
-      flex-direction: row;
-      justify-content: end;
-      height: 100%; }
-      @media screen and (max-width: 768px) {
-        .menupage .menupage__container .menupage__accordeon {
-          width: 100%;
-          justify-content: end; } }
-      .menupage .menupage__container .menupage__accordeon .menupage__accordeon-item {
-        display: flex;
-        flex-direction: row; }
-        .menupage .menupage__container .menupage__accordeon .menupage__accordeon-item .menupage__accordeon-link {
-          display: block;
-          position: relative;
-          width: 5rem;
-          background-size: cover;
-          background-position: center center;
-          background-repeat: no-repeat; }
-          @media screen and (max-width: 480px) {
-            .menupage .menupage__container .menupage__accordeon .menupage__accordeon-item .menupage__accordeon-link {
-              width: 4.0625rem; } }
-          .menupage .menupage__container .menupage__accordeon .menupage__accordeon-item .menupage__accordeon-link .menupage__accordeon-link-text {
-            position: absolute;
-            margin-top: -1.25rem;
-            color: #ffffff;
-            font-family: 'gagalin';
-            font-size: 2.5rem;
-            font-weight: 400;
-            transform: rotate(-90deg) translateY(-50%);
-            transform-origin: 0 0;
-            left: 50%;
-            top: 100%;
-            text-align: center;
-            white-space: nowrap; }
-        .menupage .menupage__container .menupage__accordeon .menupage__accordeon-item .menupage__accordeon-content {
-          height: 100%;
-          overflow: hidden;
-          width: 0;
-          background: rgba(47, 50, 52, 0.93); }
-          @media screen and (max-width: 768px) {
-            .menupage .menupage__container .menupage__accordeon .menupage__accordeon-item .menupage__accordeon-content {
-              display: flex; } }
-          .menupage .menupage__container .menupage__accordeon .menupage__accordeon-item .menupage__accordeon-content .menupage__accordeon-content-text {
-            padding: 3.125rem 1.875rem 0 1.875rem;
-            color: #fff;
-            font-family: 'ubuntu';
-            font-weight: 300;
-            line-height: 2; }
-            @media screen and (max-width: 480px) {
-              .menupage .menupage__container .menupage__accordeon .menupage__accordeon-item .menupage__accordeon-content .menupage__accordeon-content-text {
-                padding: 3%;
-                line-height: 1; } }
-        .menupage .menupage__container .menupage__accordeon .menupage__accordeon-item.active .menupage__accordeon-content {
-          width: 33.75rem;
-          background: #363636;
-          opacity: .9; }
-          @media screen and (max-width: 768px) {
-            .menupage .menupage__container .menupage__accordeon .menupage__accordeon-item.active .menupage__accordeon-content {
-              width: 18.75rem; } }
-          @media screen and (max-width: 480px) {
-            .menupage .menupage__container .menupage__accordeon .menupage__accordeon-item.active .menupage__accordeon-content {
-              width: 9.375rem; } }
+
+.menupage__title {
+  display: flex;
+  position: relative;
+  top: 5%;
+  left: 5%; }
+  @media screen and (max-width: 768px) {
+    .menupage__title {
+      display: none; } }
+
+.menupage__title-txt {
+  color: #ffffff;
+  font-family: 'gagalin';
+  font-size: 4.5rem;
+  font-weight: 400; }
+
+.menupage__container {
+  position: absolute;
+  display: block;
+  right: 0;
+  height: 100vh; }
+  @media screen and (max-width: 768px) {
+    .menupage__container {
+      width: 100%;
+      display: flex; } }
+
+.menupage__accordeon {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  height: 100%; }
+  @media screen and (max-width: 768px) {
+    .menupage__accordeon {
+      width: 100%;
+      justify-content: end; } }
+
+.menupage__accordeon-item {
+  display: flex;
+  flex-direction: row; }
+
+.active .menupage__accordeon-link-text {
+  color: #f9b43b; }
+
+.active .menupage__accordeon-content {
+  width: 33.75rem;
+  background: #363636;
+  opacity: .9; }
+  @media screen and (max-width: 768px) {
+    .active .menupage__accordeon-content {
+      width: 18.75rem; } }
+  @media screen and (max-width: 480px) {
+    .active .menupage__accordeon-content {
+      width: 9.375rem; } }
+
+.menupage__accordeon-link {
+  display: block;
+  position: relative;
+  width: 5rem;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 2; }
+  @media screen and (max-width: 480px) {
+    .menupage__accordeon-link {
+      width: 4.0625rem; } }
+
+.menupage__accordeon-link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: .7;
+  z-index: -1; }
+
+.menupage__accordeon-link-text {
+  position: absolute;
+  margin-top: -1.25rem;
+  color: #ffffff;
+  font-family: 'gagalin';
+  font-size: 2.5rem;
+  font-weight: 400;
+  transform: rotate(-90deg) translateY(-50%);
+  transform-origin: 0 0;
+  left: 50%;
+  top: 100%;
+  text-align: center;
+  white-space: nowrap; }
+
+.menupage__accordeon-content {
+  height: 100%;
+  overflow: hidden;
+  width: 0;
+  background: rgba(47, 50, 52, 0.93); }
+  @media screen and (max-width: 768px) {
+    .menupage__accordeon-content {
+      display: flex; } }
+
+.menupage__accordeon-content-text {
+  padding: 3.125rem 1.875rem 0 1.875rem;
+  color: #fff;
+  font-family: 'ubuntu';
+  font-weight: 300;
+  line-height: 2; }
+  @media screen and (max-width: 480px) {
+    .menupage__accordeon-content-text {
+      padding: 3%;
+      line-height: 1; } }
 
 /*# sourceMappingURL=menupage.css.map */

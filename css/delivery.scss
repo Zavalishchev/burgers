@@ -10,221 +10,184 @@
     background-repeat: no-repeat;
     background-size: cover;
     justify-content: center;
+}
 
-    .delivery__container {
-        display: flex;
-        flex-wrap: wrap;
-        position: relative;
-        top: 25%;
-        flex-direction: column;
+.delivery__container {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
 
-        @include tablets {
-            top: 0;
-        }
-
-        @include phones {
-            width: 100%;
-            padding: 0 5%;
-        }
-
-        .delivery__title-txt {
-            text-align: center;
-            color: #f9b43b;
-            font-family: 'gagalin';
-            font-size: rem(72px);
-            font-weight: 400;
-            text-transform: uppercase;
-            margin-bottom: rem(40px);
-
-            @include phones {
-                text-align: left;
-                font-size: rem(60px);
-            }
-        }
-
-        .delivery__orderform {
-            display: flex;
-            flex-direction: row;
-
-            @include tablets {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .orderform-address-list {
-                display: flex;
-                flex-wrap: wrap;
-                width: rem(480px);
-                height: rem(206px);
-
-                @include tablets {
-                    margin-bottom: rem(20px);
-                }
-
-                .address-list-row {
-                    display: flex;
-                    flex-direction: row;
-
-                    .address-item {
-                        display: block;
-                        margin-bottom: rem(20px);
-                        margin-right: rem(20px);
-    
-                        .address-item-title {
-                            font-family: 'ubuntu';
-                            font-size: rem(14px);
-                            font-weight: 300;
-                            color: #ffffff;
-                            margin-bottom: rem(5px);
-                        }
-    
-                        .address-item-autorization {
-                            width: rem(221px);
-                            height: rem(35px);
-                            border-radius: rem(5px);
-                            border-style: none;
-                            padding-left: rem(10px);
-                            outline-color: #f9b43b;
-
-                            @include phones {
-                                width: rem(150px);
-                            }
-                        }
-    
-                        .street {
-                            width: rem(460px);
-
-                            @include phones {
-                                width: rem(320px);
-                            }
-                        }
-                        .apartment {
-                            width: rem(100px);
-
-                            @include phones {
-                                width: rem(65px);
-                            }
-                        }
-                    }
-                }
-            }
-
-            .orderform-additional-list {
-                display: flex;
-                flex-wrap: wrap;
-                width: rem(480px);
-
-                .additional-list-row {
-                    display: flex;
-                    flex-direction: row;
-
-                    .additional-item {
-                        display: block;
-                        margin-bottom: rem(20px);
-    
-                        .additional-title {
-                            font-family: 'ubuntu';
-                            font-size: rem(14px);
-                            font-weight: 300;
-                            color: #ffffff;
-                            margin-bottom: rem(5px);
-                        }
-    
-                        .additional-item-autorization {
-                            width: rem(460px);
-                            height: rem(109px);
-                            border-radius: rem(5px);
-                            border-style: none;
-                            padding-left: rem(10px);
-                            padding-top: rem(5px);
-                            outline-color: #f9b43b;
-                            resize: none;
-
-                            @include phones {
-                                width: rem(320px);
-                            }
-                        }
-    
-                        .additional-radio {
-                            margin: 0;
-                            margin-right: rem(10px); 
-                            display: none; 
-                        }
-
-                        .radio__idicator {
-                            display: inline-block;
-                            width: rem(16px);
-                            height: rem(16px);
-                            border: 1px #fff solid;
-                            background-color: #fff;
-                            border-radius: 50%;
-                            cursor: pointer;
-                            margin-right: 10px;
-                            position: relative;
-                        }
-
-                        .additional-radio:checked + .radio__idicator::before {
-                            content: "";
-                            position: absolute;
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-50%, -50%);
-                            width: 0.5rem;
-                            height: 0.5rem;
-                            background-color: #e35028;
-                            border-radius: 50%;
-                        }
-    
-                        .additional-radio-txt {
-                            font-family: 'ubuntu';
-                            font-size: rem(14px);
-                            font-weight: 300;
-                            color: #ffffff;
-                            margin-right: rem(20px);
-                        }
-                        .additional-check {
-                            display: none;
-                        }
-
-                        .checkbox__indicator {
-                            display: inline-block;
-                            position: relative;
-                            width: rem(12px);
-                            height: rem(12px);
-                            border: 1px #fff solid;
-                            background-color: #fff;
-                            border-radius: rem(2px);
-                            margin-right: rem(10px);
-                        }
-
-                        .additional-check:checked + .checkbox__indicator::before {
-                            content: "\2714";
-                            position: absolute;
-                            top: rem(-13px);
-                            left: rem(-1px);
-                            font-size: rem(20px);
-                            color: #e35028;
-                        }
-    
-                        .additional-submit-container {
-                            display: block;
-                            margin-top: rem(10px);
-                            min-width: rem(740px);
-                            clear: both;
-    
-                            .additional-submit {
-                                margin-right: rem(20px);
-                                width: rem(97px);
-                                height: rem(35px);
-                                background-color: #e35028;
-                                border-radius: rem(5px);
-                                border: none;
-                                color: #ffffff;
-                            }
-                        }
-                    }
-                }   
-            }
-        }
+    @include tablets {
+        top: 0;
     }
+
+    @include phones {
+        width: 100%;
+        padding: 0 5%;
+    }
+}
+
+.delivery__title-txt {
+    text-align: center;
+    color: #f9b43b;
+    font-family: 'gagalin';
+    font-size: rem(72px);
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: rem(40px);
+
+    @include phones {
+        text-align: left;
+        font-size: rem(60px);
+        text-align: center;
+    }
+}
+
+.delivery__orderform {
+    display: flex;
+    width: 100%;
+
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.orderform-address-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    margin-right: rem(20px);
+    margin-left: rem(20px);
+
+    @include tablets {
+        margin-bottom: rem(20px);
+    }
+}
+
+.address-list-row {
+    display: flex;
+    width: 100%;
+    margin-bottom: rem(15px);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.address-item {
+    display: block;
+    margin-right: rem(20px);
+    flex: 1;
+    width: 100%;
+
+    &:last-child {
+        margin: 0;
+    }
+}    
+
+.address-item-title {
+    font-family: 'ubuntu';
+    font-size: rem(14px);
+    font-weight: 300;
+    color: #ffffff;
+    margin-bottom: rem(5px);
+}
+    
+.address-item-autorization {
+    width: 100%;
+    height: rem(35px);
+    border-radius: rem(5px);
+    border-style: none;
+    padding-left: rem(10px);
+    outline-color: #f9b43b;
+}
+    
+.additional-item-autorization {
+    width: 100%;
+    height: rem(109px);
+    border-radius: rem(5px);
+    border-style: none;
+    padding-left: rem(10px);
+    padding-top: rem(5px);
+    outline-color: #f9b43b;
+    resize: none;
+}
+    
+.additional-radio {
+    margin: 0;
+    margin-right: rem(10px); 
+    display: none; 
+}
+
+.radio__idicator {
+    display: inline-block;
+    width: rem(16px);
+    height: rem(16px);
+    border: 1px #fff solid;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 10px;
+    position: relative;
+}
+
+.additional-radio:checked + .radio__idicator::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: #e35028;
+    border-radius: 50%;
+}
+    
+.additional-radio-txt {
+    font-family: 'ubuntu';
+    font-size: rem(14px);
+    font-weight: 300;
+    color: #ffffff;
+    margin-right: rem(20px);
+}
+.additional-check {
+    display: none;
+}
+
+.checkbox__indicator {
+    display: inline-block;
+    position: relative;
+    width: rem(12px);
+    height: rem(12px);
+    border: 1px #fff solid;
+    background-color: #fff;
+    border-radius: rem(2px);
+    margin-right: rem(10px);
+}
+
+.additional-check:checked + .checkbox__indicator::before {
+    content: "\2714";
+    position: absolute;
+    top: rem(-13px);
+    left: rem(-1px);
+    font-size: rem(20px);
+    color: #e35028;
+}
+    
+.additional-submit-container {
+    display: block;
+    margin-top: rem(10px);
+}
+.additional-submit {
+    margin-right: rem(20px);
+    width: rem(97px);
+    height: rem(35px);
+    background-color: #e35028;
+    border-radius: rem(5px);
+    border: none;
+    color: #ffffff;
 }

@@ -2,10 +2,11 @@
 
 .hamburger {
     top: rem(6px);
-	position: relative;
+    position: fixed;
+    right: rem(30px);
+    top: rem(30px);
 	height: rem(22px);
 	align-items: center;
-    margin-left: rem(30px);
     display: none;
 
     @include tablets {

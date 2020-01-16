@@ -9,82 +9,89 @@
     justify-content: space-between;
     background-image: url('../img/background_1.png');
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
+}
 
-    .intro__container {
-        display: flex;
-        justify-content: space-around;
-        padding-top: rem(12px);
-        flex-direction: row;
+.intro__container {
+    display: flex;
+    justify-content: space-around;
+    padding-top: rem(12px);
+    flex-direction: row;
+}
 
-        .intro__logo {
-            display: flex;
+.intro__logo {
+    display: flex;
+}
 
-            .intro__logo-link {
-                display: inline-block;
+.intro__logo-link {
+    display: inline-block;
+}
+.intro__logo-img {
+    display: inline-block;
+}
 
-                .intro__logo-img {
-                    display: inline-block;
-                }
-            }
+.intro__menu {
+    display: flex;
+        @include tablets {
+            display: none;
         }
-
-        .intro__menu {
-            display: flex;
-
-            @include tablets {
-                display: none;
-            }
-
-            .menu__list {
-                display: flex;
-                margin: rem(20px) 0 0 0;
-                padding: 0;
-                align-items: center;
-
-                .menu__item {
-                    display: flex;
-                    margin-right: rem(10px);
-
-                    .menu__link {
-                        display: inline-flex;
-                        text-decoration: none;
-                        text-transform: uppercase;
-                        font-weight: 500;
-                        font-size: rem(13px);
-                        color: #fff;
-                        padding-right: rem(5px);
-                    }
-                }
-                .menu__item::after {
-                    display: inline-block;
-                    content: "";
-                    height: rem(4px);
-                    width: rem(4px); 
-                    border: 1px #fff solid;
-                    border-radius: rem(5px);
-                    background-color: #fff;
-                    vertical-align: middle;
-                    margin-top: rem(5px);
-                }  
-                + after:last-child {
-                    display: none;
-                }
-            }
-        }   
-
-        .intro__button {
-            display: flex;
-            margin-top: rem(13px);
-            height: rem(35px);
-
-            .intr__button {
-                background-color: #e45028;
-            }
-        }   
     }
 
-    .intro__maincontent {
+.menu__list {
+    display: flex;
+    margin: rem(20px) 0 0 0;
+    padding: 0;
+    align-items: center;
+}
+
+.menu__item {
+    display: flex;
+    margin-right: rem(10px);
+}
+.menu__link {
+    display: inline-flex;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: rem(13px);
+    color: #fff;
+    padding-right: rem(5px);
+}
+.menu__item::after {
+    display: inline-block;
+    content: "";
+    height: rem(4px);
+    width: rem(4px); 
+    border: 1px #fff solid;
+    border-radius: rem(5px);
+    background-color: #fff;
+    vertical-align: middle;
+    margin-top: rem(5px);
+}  
+
+.menu__item:last-child:after {
+    display: none; 
+}
+.menu__item:last-child {
+    margin-right: 0;
+}
+
+.menu__list:last-child {
+    margin-right: 0;
+}
+
+.intro__button {
+    display: flex;
+    margin-top: rem(13px);
+    height: rem(35px);
+    margin-right: rem(50px);
+}
+.intr__button {
+    background-color: #e45028;
+}
+  
+
+.intro__maincontent {
         display: flex;
         position: relative;
         justify-content: center;
@@ -102,30 +109,29 @@
             top: 0;
             padding: 0 12%;
         }
+}
 
-        .intro__maincontent-picture {
-            display: flex;
-            justify-content: center;
-            
+.intro__maincontent-picture {
+    display: flex;
+    justify-content: center;
+}        
 
-            .intro__maincontent-img {
-                display: flex;
-                position: relative;
-                z-index: 2; 
-                max-width: 100%;
-             }
-             .intro__maincontent-img::after {
-                content: '';
-                display: block;
-                position: absolute;
-                z-index: -3;
-                background-image: url('./img/intro__splash.png') center center;
-                background-repeat: no-repeat;
-            }
-        }
-    }
+.intro__maincontent-img {
+    display: flex;
+    position: relative;
+    z-index: 2; 
+    max-width: 100%;
+}
+.intro__maincontent-img::after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -3;
+    background-image: url('./img/intro__splash.png') center center;
+    background-repeat: no-repeat;
+}
     
-    .intro__maincontent-descr {
+.intro__maincontent-descr {
         display: flex;
         position: relative;
         flex-direction: column;
@@ -135,52 +141,50 @@
         @include tablets {
             padding: 0 20%;
         }
+}
 
-        .intro__title {
-            display: flex;
-            text-align: center;
+.intro__title {
+    display: flex;
+    text-align: center;
 
-            @include tablets {
-                margin: 0;
-                padding: 0;
-                font-size: rem(70px);
-            }
-            @include phones {
-                font-size: rem(65px);
-            }
-        }
+    @include tablets {
+        margin: 0;
+        padding: 0;
+        font-size: rem(70px);
+    }
+    @include phones {
+        font-size: rem(65px);
+    }
+}
         
-        .intro__maincontent-text {
-            display: block;
-            padding: 0;
-            margin: 0;
-            font-family: 'lifehack';
-            color: #ffffff;
-            font-weight: 500;
-            letter-spacing: rem(-1.63px);
-            font-size: rem(65px);
-            line-height: rem(60px);
+.intro__maincontent-text {
+    display: block;
+    padding: 0;
+    margin: 0;
+    font-family: 'lifehack';
+    color: #ffffff;
+    font-weight: 500;
+    letter-spacing: rem(-1.63px);
+    font-size: rem(65px);
+    line-height: rem(60px);
 
-            @include tablets {
-                font-size: rem(63px);
-            }
-            @include phones {
-                font-size: rem(54px);
-            }
-        }
+    @include tablets {
+        font-size: rem(63px);
     }
-
-    .arrowscroll-link {
-        margin: 0 auto;
-        display: flex;
-        position: relative;
-        justify-content: center;
-        margin-bottom: rem(20px);
-
-        .arrowscroll-triangle {
-            position: relative;
-            width: rem(29px);
-            height: rem(14px);
-        }
+    @include phones {
+        font-size: rem(54px);
     }
+}
+
+.arrowscroll-link {
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin-bottom: rem(20px);
+}
+.arrowscroll-triangle {
+    position: relative;
+    width: rem(29px);
+    height: rem(14px);
 }
