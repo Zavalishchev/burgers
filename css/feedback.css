@@ -44,6 +44,9 @@
   font-weight: 400;
   text-transform: uppercase;
   opacity: 1; }
+  @media screen and (max-width: 768px) {
+    .feedback__item-name {
+      padding: 1.25rem 1.25rem; } }
   @media screen and (max-width: 480px) {
     .feedback__item-name {
       padding: 1.25rem 1.25rem; } }
@@ -56,6 +59,10 @@
   opacity: 1;
   font-weight: 300;
   padding-bottom: 1.25rem; }
+  @media screen and (max-width: 768px) {
+    .feedback__item-text {
+      display: none;
+      padding: 1.25rem 1.25rem; } }
   @media screen and (max-width: 480px) {
     .feedback__item-text {
       display: none;
@@ -63,13 +70,16 @@
 
 .feedback_button {
   background-color: #2f3234; }
+  @media screen and (max-width: 768px) {
+    .feedback_button {
+      margin: 1.25rem 1.25rem; } }
   @media screen and (max-width: 480px) {
     .feedback_button {
       margin: 1.25rem 1.25rem; } }
 
 .feedback__item:hover .feedback__item-block {
   display: block;
-  padding: 1.25rem;
+  padding: 0.3125rem 0.3125rem 0 0.3125rem;
   position: absolute;
   width: 100%;
   height: 100%;
