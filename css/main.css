@@ -882,7 +882,6 @@ a {
 .delivery__container {
   display: flex;
   flex: 1;
-  flex-wrap: wrap;
   justify-content: center;
   position: relative;
   flex-direction: column; }
