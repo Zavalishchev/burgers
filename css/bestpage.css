@@ -10,9 +10,10 @@
 .bestpage__container {
   display: flex;
   vertical-align: middle;
-  flex-direction: column;
-  justify-content: center;
   align-items: center; }
+  @media screen and (max-width: 480px) {
+    .bestpage__container {
+      margin-top: 0.625rem; } }
 
 .bestpage__title-text {
   display: block;

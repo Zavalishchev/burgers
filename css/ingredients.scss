@@ -7,7 +7,6 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 .ingredients__container {
     display: flex;
     height: 100vh;
@@ -15,7 +14,6 @@
     align-items: center;
     justify-content: space-around;
 }
-    
 .ingridients__arrowlink {
     display: flex;
     transform: rotate(90deg);
@@ -23,20 +21,22 @@
 .left {
     transform: rotate(-90deg);
 }
-
 .ingridients__arrow-img {
     display: flex;
     position: relative;
 }
-    
-
-
-
 .ingridients__main {
     display: flex;
     position: relative;
     flex-direction: row;
     max-width: 80%;
+
+    @include tablets {
+        
+    }
+    @include phones {
+        flex-direction: column;
+    }
 }    
 .ingridients__main-pictures {
     display: flex;
@@ -55,7 +55,7 @@
 .main__pictures-txt {
     color: #ffffff;
     font-family: 'gagalin';
-    font-size: 14px;
+    font-size: rem(14px);
     font-weight: 400;
     text-transform: uppercase;
     text-align: center;
@@ -72,6 +72,13 @@
     position: absolute;
     bottom: 0;
     flex-direction: column;
+
+    @include tablets {
+        
+    }
+    @include phones {
+        display: none;
+    }
 }
 .main__kkal-img {
     width: 100%;
@@ -80,19 +87,21 @@
 .opacity_mod {
     opacity: 0.6;
 }
-
-
 .ingridients__main-description {
     display: flex;
     flex-direction: column;
     max-width: 50%;
+    
+    @include phones {
+        max-width: 100%;
+    }
 } 
 .ingridients__main-description-title {
     display: flex;
     padding-bottom: rem(15px);
     color: #ffffff;
     font-family: 'gagalin';
-    font-size: 72px;
+    font-size: rem(72px);
     font-weight: 400;
     text-transform: uppercase;
 }
@@ -100,38 +109,56 @@
     display: flex;
     color: #ffffff;
     font-family: 'ubuntu';
-    font-size: 16px;
+    font-size: rem(16px);
     font-weight: 300;
 }
 .ingridients__main-description-container {
     display: flex;
     position: relative;
+
+    @include tablets {
+        flex-direction: column;
+    }
+    @include phones {
+        flex-direction: column;
+    }
 }    
+.main-discription-container-titles {
+    display: flex;
+}
 .ingridients__main-description-price {
     display: flex;
     padding: 0;
     margin: 0;
-    padding-right: 5px;
+    padding-right: rem(5px);
     color: #e35028;
     font-family: 'gagalin';
-    font-size: 72px;
+    font-size: rem(72px);
     font-weight: 400;
-    letter-spacing: -1.79px;
+    letter-spacing: rem(-1.79px);
 }  
 .description__price {
-    bottom: 0;
-    font-size: 32px;
+
+    margin-top: rem(40px);
+    font-size: rem(32px);
 }
 .ingridients__main-description-button {
-    margin-top: 35px;
-    width: 97px;
-    height: 37px;
+    margin-top: rem(35px);
+    width: rem(97px);
+    height: rem(37px);
     background-color: #e45028;
     border: none;
-    border-radius: 4px;
+    border-radius: rem(4px);
     color: #ffffff;
     font-family: 'ubuntu';
-    font-size: 13px;
+    font-size: rem(13px);
     font-weight: 500;
     text-transform: uppercase;
+
+    @include tablets {
+        margin: 0;
+    }
+    @include phones {
+        margin: 0;
+    }
 }

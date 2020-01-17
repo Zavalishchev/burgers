@@ -13,9 +13,13 @@
 .bestpage__container {
     display: flex;
     vertical-align: middle;
-    flex-direction: column;
-    justify-content: center;
+    //flex-direction: column;
+    //justify-content: center;
     align-items: center;
+
+    @include phones {
+        margin-top: rem(10px);
+    }
 }
 
 .bestpage__title-text {

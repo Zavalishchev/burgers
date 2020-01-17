@@ -28,6 +28,9 @@
   position: relative;
   flex-direction: row;
   max-width: 80%; }
+  @media screen and (max-width: 480px) {
+    .ingridients__main {
+      flex-direction: column; } }
 
 .ingridients__main-pictures {
   display: flex;
@@ -46,7 +49,7 @@
 .main__pictures-txt {
   color: #ffffff;
   font-family: 'gagalin';
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 400;
   text-transform: uppercase;
   text-align: center; }
@@ -63,6 +66,9 @@
   position: absolute;
   bottom: 0;
   flex-direction: column; }
+  @media screen and (max-width: 480px) {
+    .ingridients__main-kkal {
+      display: none; } }
 
 .main__kkal-img {
   width: 100%;
@@ -75,13 +81,16 @@
   display: flex;
   flex-direction: column;
   max-width: 50%; }
+  @media screen and (max-width: 480px) {
+    .ingridients__main-description {
+      max-width: 100%; } }
 
 .ingridients__main-description-title {
   display: flex;
   padding-bottom: 0.9375rem;
   color: #ffffff;
   font-family: 'gagalin';
-  font-size: 72px;
+  font-size: 4.5rem;
   font-weight: 400;
   text-transform: uppercase; }
 
@@ -89,39 +98,54 @@
   display: flex;
   color: #ffffff;
   font-family: 'ubuntu';
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 300; }
 
 .ingridients__main-description-container {
   display: flex;
   position: relative; }
+  @media screen and (max-width: 768px) {
+    .ingridients__main-description-container {
+      flex-direction: column; } }
+  @media screen and (max-width: 480px) {
+    .ingridients__main-description-container {
+      flex-direction: column; } }
+
+.main-discription-container-titles {
+  display: flex; }
 
 .ingridients__main-description-price {
   display: flex;
   padding: 0;
   margin: 0;
-  padding-right: 5px;
+  padding-right: 0.3125rem;
   color: #e35028;
   font-family: 'gagalin';
-  font-size: 72px;
+  font-size: 4.5rem;
   font-weight: 400;
-  letter-spacing: -1.79px; }
+  letter-spacing: -0.111875rem; }
 
 .description__price {
-  bottom: 0;
-  font-size: 32px; }
+  margin-top: 2.5rem;
+  font-size: 2rem; }
 
 .ingridients__main-description-button {
-  margin-top: 35px;
-  width: 97px;
-  height: 37px;
+  margin-top: 2.1875rem;
+  width: 6.0625rem;
+  height: 2.3125rem;
   background-color: #e45028;
   border: none;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   color: #ffffff;
   font-family: 'ubuntu';
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-weight: 500;
   text-transform: uppercase; }
+  @media screen and (max-width: 768px) {
+    .ingridients__main-description-button {
+      margin: 0; } }
+  @media screen and (max-width: 480px) {
+    .ingridients__main-description-button {
+      margin: 0; } }
 
 /*# sourceMappingURL=ingredients.css.map */
