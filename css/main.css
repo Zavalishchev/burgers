@@ -338,6 +338,7 @@ a {
 .bestpage__container {
   display: flex;
   vertical-align: middle;
+  justify-content: center;
   align-items: center; }
   @media screen and (max-width: 768px) {
     .bestpage__container {
@@ -888,7 +889,7 @@ a {
 
 .feedback__item:hover .feedback__item-block {
   display: block;
-  padding: 0.625rem 0.625rem 0 0.625rem;
+  padding: 1.25rem 1.25rem 0 1.25rem;
   position: absolute;
   width: 100%;
   height: 100%;
