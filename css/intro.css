@@ -93,7 +93,7 @@
   @media screen and (max-width: 480px) {
     .intro__maincontent {
       top: 0;
-      padding: 0 12%; } }
+      padding: 5% 12%; } }
 
 .intro__maincontent-picture {
   display: flex;

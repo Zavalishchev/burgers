@@ -17,6 +17,10 @@
     //justify-content: center;
     align-items: center;
 
+    @include tablets {
+        justify-content: center;
+    }
+
     @include phones {
         margin-top: rem(10px);
     }

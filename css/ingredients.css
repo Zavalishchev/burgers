@@ -28,8 +28,11 @@
   position: relative;
   flex-direction: row;
   max-width: 80%; }
+
+.ingridients__main-item {
+  display: flex; }
   @media screen and (max-width: 480px) {
-    .ingridients__main {
+    .ingridients__main-item {
       flex-direction: column; } }
 
 .ingridients__main-pictures {
