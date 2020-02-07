@@ -12,7 +12,7 @@
         
         <section class="intro">
 
-            <header class="intro__container">
+            <header class="intro__container container">
                 <div class="intro__logo">
                     <a href="#" class="intro__logo-link">
                         <img src="./img/intro_logo.png" alt="logo" class="intro__logo-img">
@@ -115,7 +115,7 @@
         </section>
 
         <section class="ingredients">
-            <div class="ingredients__container">
+            <div class="ingredients__container container">
 
                 <a href="#" id="left" class="ingridients__arrowlink">
                     <img src="./img/arrow-scroll.png" alt="" class="ingridients__arrow-img">
@@ -156,9 +156,9 @@
                         </div>
                         </div>
                     </div>  
-
-                     
-
+                
+                    
+                
                 </div>
 
                 <a href="#" id="right" class="ingridients__arrowlink left">
@@ -167,35 +167,6 @@
                     
             </div>
         </section>
-
-        <script>
-            const left = document.querySelector('#left');
-            const right = document.querySelector('#right');
-            const item = document.querySelector('#items');
-            const computed = getComputedStyle(items);
-
-            const containerSize = parseFloat(computed.width);
-            const minRight = 0;
-            const maxRight = 3 * containerSize;
-
-            left.addEventListener('click', function(e) {
-                e.preventDefault();
-                let currentRight = containerSize;
-                if(!currentRight) {
-                    currentRight = 0;
-                }
-                if (currentRight < maxRight) {
-                    items.width = currentRight + containerSize + 'px';
-                }
-                
-            });
-
-            right.addEventListener('click', function(e) {
-                e.preventDefault();
-
-            });
-            
-        </script>
 
         <section class="team">
             <div class="team__container container">
@@ -327,7 +298,7 @@
                             Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
                             Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                         </p>
-                        <button class="button feedback_button">ПОДРОБНЕЕ </button>
+                        <button id="openOverlay" class="button feedback_button">ПОДРОБНЕЕ </button>
                     </div>
                 </li>
                 <li class="feedback__item">
@@ -338,7 +309,7 @@
                             Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
                             Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                         </p>
-                        <button class="button feedback_button">ПОДРОБНЕЕ </button>
+                        <button id="openOverlay" class="button feedback_button">ПОДРОБНЕЕ </button>
                     </div>
                 </li>
                 <li class="feedback__item">
@@ -349,7 +320,7 @@
                                 Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
                                 Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                             </p>
-                            <button class="button feedback_button">ПОДРОБНЕЕ </button>
+                            <button id="openOverlay" class="button feedback_button">ПОДРОБНЕЕ </button>
                         </div>
                 </li>
                 <li class="feedback__item">
@@ -360,7 +331,7 @@
                                 Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
                                 Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                             </p>
-                            <button class="button feedback_button">ПОДРОБНЕЕ </button>
+                            <button id="openOverlay" class="button feedback_button">ПОДРОБНЕЕ </button>
                         </div>
                 </li>
                 <li class="feedback__item">
@@ -371,7 +342,7 @@
                                 Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
                                 Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                             </p>
-                            <button class="button feedback_button">ПОДРОБНЕЕ </button>
+                            <button id="openOverlay" class="button feedback_button">ПОДРОБНЕЕ </button>
                         </div>
                 </li>
                 <li class="feedback__item">
@@ -382,7 +353,7 @@
                                 Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
                                 Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                             </p>
-                            <button class="button feedback_button">ПОДРОБНЕЕ </button>
+                            <button id="openOverlay" class="button feedback_button">ПОДРОБНЕЕ </button>
                         </div>
                 </li>
                 <li class="feedback__item">
@@ -393,7 +364,7 @@
                                 Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
                                 Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                             </p>
-                            <button class="button feedback_button">ПОДРОБНЕЕ </button>
+                            <button id="openOverlay" class="button feedback_button">ПОДРОБНЕЕ </button>
                         </div>
                 </li>
                 <li class="feedback__item">
@@ -404,10 +375,58 @@
                                 Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
                                 Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                             </p>
-                            <button class="button feedback_button">ПОДРОБНЕЕ </button>
+                            <button id="openOverlay" class="button feedback_button">ПОДРОБНЕЕ </button>
                         </div>
                 </li>
+                <script type="template" id="overlayTemplate">
+                    <div class="containerOverlay">
+                        <a href="#" class="closeOverlay"> x </a>
+                        <div class="contentOverlay feedback__item-text"></div>
+                    </div>
+                </script>
+
+                <script>
+                    const openButton = document.querySelectorAll("#openOverlay");
+                    const sectionInner = document.querySelector(".feedback");
+                    const buttonLenght = document.getElementsByClassName("feedback_button").length;
+                    console.log(buttonLenght);
+
+                    const successOverlay = createOverlay("Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.");
+
+                    for(var i = 0; i < buttonLenght; i++){
+                        openButton[i].addEventListener('click', function(e){
+                            e.preventDefault();
+                            
+                            sectionInner.appendChild(successOverlay); 
+                        });
+                    }
+
+                    function createOverlay(content){
+                        const overlayElement = document.createElement("div");
+                        overlayElement.classList.add("overlay");
+
+                        const templateOverlay = document.querySelector("#overlayTemplate");
+                        overlayElement.innerHTML = templateOverlay.innerHTML;
+
+                        const closeOverlay = overlayElement.querySelector(".closeOverlay");
+                        overlayElement.addEventListener("click", function(e){
+                            if(e.target === overlayElement){
+                                sectionInner.removeChild(overlayElement);
+                            }
+                        });
+                        closeOverlay.addEventListener('click', function(e){
+                            e.preventDefault();
+                            sectionInner.removeChild(overlayElement);
+                        });
+
+                        const newElement = overlayElement.querySelector(".contentOverlay");
+                        newElement.innerHTML = content;
+
+                        return overlayElement;
+                    }
+                </script>
             </ul>
+            
         </section>
 
         <section class="delivery">
