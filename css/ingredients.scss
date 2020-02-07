@@ -10,6 +10,7 @@
 .ingredients__container {
     display: flex;
     height: 100vh;
+    width: 100%;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
@@ -33,10 +34,15 @@
 }    
 .ingridients__main-item {
     display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+
     @include phones {
         flex-direction: column;
     }
 }
+
 .ingridients__main-pictures {
     display: flex;
     align-items: center;

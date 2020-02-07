@@ -30,7 +30,8 @@
   @media screen and (max-width: 768px) {
     .menupage__container {
       width: 100%;
-      display: flex; } }
+      display: flex;
+      justify-content: flex-end; } }
 
 .menupage__accordeon {
   display: flex;
@@ -39,7 +40,6 @@
   height: 100%; }
   @media screen and (max-width: 768px) {
     .menupage__accordeon {
-      width: 100%;
       justify-content: end; } }
 
 .menupage__accordeon-item {
