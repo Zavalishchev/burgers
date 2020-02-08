@@ -244,8 +244,8 @@
                 <h1 class="menupage__title-txt">меню</h1>
             </div>
             <div class="menupage__container">
-                <ul class="menupage__accordeon">
-                    <li class="menupage__accordeon-item ">
+                <ul id="menupage__accordeon" class="menupage__accordeon">
+                    <li id="menupage__accordeon-item" class="menupage__accordeon-item ">
                         <a href="#" class="menupage__accordeon-link" style="background-image: url('./img/background_eatmeat.png')">
                             <div class="menupage__accordeon-link-text">для мясоедов</div>
                         </a>
@@ -258,7 +258,7 @@
                             </p>
                         </div>
                     </li>
-                    <li class="menupage__accordeon-item active">
+                    <li id="menupage__accordeon-item" class="menupage__accordeon-item">
                         <a href="#" class="menupage__accordeon-link" style="background-image: url('./img/background_vegeterian.png')">
                             <div class="menupage__accordeon-link-text">вегетерианское</div>
                         </a>
@@ -271,12 +271,12 @@
                             </p>
                         </div>
                     </li>
-                    <li class="menupage__accordeon-item ">
+                    <li id="menupage__accordeon-item" class="menupage__accordeon-item ">
                         <a href="#" class="menupage__accordeon-link" style="background-image: url('./img/background_diet.png')">
                             <div class="menupage__accordeon-link-text">диетическое</div>
                         </a>
                         <div class="menupage__accordeon-content">
-                            <p class="manupage__accordeon-content-text">
+                            <p class="menupage__accordeon-content-text">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
                                 Aut tempora veritatis provident, molestiae ducimus dignissimos vel 
                                 laboriosam laborum exercitationem autem, assumenda voluptates aperiam 
@@ -285,6 +285,24 @@
                         </div>
                     </li>
                 </ul>
+
+                <script>
+                    const menupageElement = document.querySelector("#menupage__accordeon");
+                    let lastActive;
+
+                    menupageElement.addEventListener("click", function(e){
+                        e.preventDefault();
+                        if(e.target.classList.contains("menupage__accordeon-item") || e.target.classList.contains("menupage__accordeon-link") || e.target.classList.contains("menupage__accordeon-link-text")){
+                            if(lastActive){
+                                lastActive.classList.remove("active");
+                            }
+                            lastActive = e.target.parentNode;
+                            lastActive.classList.add("active");
+                        }
+                    });
+
+                </script>
+
             </div>
         </section>
 
