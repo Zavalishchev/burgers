@@ -44,7 +44,8 @@
 
 .menupage__accordeon-item {
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  transition: 3s; }
 
 .active .menupage__accordeon-link-text {
   color: #f9b43b; }
@@ -52,7 +53,8 @@
 .active .menupage__accordeon-content {
   width: 33.75rem;
   background: #363636;
-  opacity: .9; }
+  opacity: .9;
+  transition: .5s; }
   @media screen and (max-width: 768px) {
     .active .menupage__accordeon-content {
       width: 18.75rem; } }
@@ -100,7 +102,8 @@
   height: 100%;
   overflow: hidden;
   width: 0;
-  background: rgba(47, 50, 52, 0.93); }
+  background: rgba(47, 50, 52, 0.93);
+  transition: 0.3s; }
   @media screen and (max-width: 768px) {
     .menupage__accordeon-content {
       display: flex; } }
