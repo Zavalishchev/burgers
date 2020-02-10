@@ -636,7 +636,8 @@ a {
 .accordeon__container {
   display: flex;
   height: 0;
-  flex-direction: row; }
+  flex-direction: row;
+  transition: 0.5s; }
   @media screen and (max-width: 768px) {
     .accordeon__container {
       flex-direction: column;
