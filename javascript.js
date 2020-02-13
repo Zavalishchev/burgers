@@ -1,5 +1,42 @@
+
 // js для секции: ingridients
- 
+const left = document.querySelector("#left");
+const right = document.querySelector("#right");
+const ingridientsItem = document.querySelector(".ingridients__main");
+
+var rightStyle = getComputedStyle(ingridientsItem).right;
+var currentRight = parseInt(rightStyle);
+
+var widthStyle = getComputedStyle(ingridientsItem).width;
+var currentWidth = parseFloat(widthStyle);
+
+const itemsLenght = document.getElementsByClassName("ingridients__main-item").length;
+var maxWidth = currentWidth * itemsLenght;
+
+
+right.addEventListener("click", function(e){
+    e.preventDefault();
+    if(!currentRight){
+        currentRight = 0;
+    }
+    if(currentWidth >= maxWidth){
+        currentWidth += currentWidth;
+        ingridientsItem.style.right = currentWidth + "px";
+        console.log(ingridientsItem.style.right);
+    }
+});
+left.addEventListener("click", function(e){
+    e.preventDefault();
+    if(!currentRight){
+        currentRight = 0;
+    }
+    if(currentWidth > maxWidth){
+        currentWidth -= currentWidth;
+        ingridientsItem.style.right = currentWidth + "px";
+        console.log(ingridientsItem.style.right);
+    }
+});
+
 
 //js для секции: team
 const workers = document.querySelectorAll(".accordeon__item");
