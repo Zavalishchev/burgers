@@ -450,7 +450,8 @@ a {
   display: flex;
   box-sizing: border-box;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  transition: 3s; }
   @media screen and (max-width: 480px) {
     .ingridients__main-item {
       flex-direction: column; } }
@@ -689,7 +690,6 @@ a {
   .accordeon__item + .active .accordeon__link:before {
     transform: rotate(180deg); }
 .accordeon__item + .active .accordeon__container {
-  overflow: auto;
   height: 100%; }
 
 .accordeon__item:last-child {

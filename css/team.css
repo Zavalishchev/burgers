@@ -116,7 +116,6 @@
   .accordeon__item + .active .accordeon__link:before {
     transform: rotate(180deg); }
 .accordeon__item + .active .accordeon__container {
-  overflow: auto;
   height: 100%; }
 
 .accordeon__item:last-child {

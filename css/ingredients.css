@@ -8,6 +8,7 @@
 .ingredients__container {
   display: flex;
   height: 100vh;
+  width: 100%;
   flex-direction: row;
   align-items: center;
   justify-content: space-around; }
@@ -30,7 +31,11 @@
   max-width: 80%; }
 
 .ingridients__main-item {
-  display: flex; }
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  transition: 3s; }
   @media screen and (max-width: 480px) {
     .ingridients__main-item {
       flex-direction: column; } }
