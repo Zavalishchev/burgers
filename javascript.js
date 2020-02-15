@@ -2,38 +2,27 @@
 // js для секции: ingridients
 const left = document.querySelector("#left");
 const right = document.querySelector("#right");
-const ingridientsItem = document.querySelector(".ingridients__main");
-
-var rightStyle = getComputedStyle(ingridientsItem).right;
-var currentRight = parseInt(rightStyle);
-
-var widthStyle = getComputedStyle(ingridientsItem).width;
-var currentWidth = parseFloat(widthStyle);
-
-const itemsLenght = document.getElementsByClassName("ingridients__main-item").length;
-var maxWidth = currentWidth * itemsLenght;
-
+const ingridientsItem = document.querySelector(".ingridients__slider-items");
+const computed = getComputedStyle(ingridientsItem);
 
 right.addEventListener("click", function(e){
     e.preventDefault();
+    let currentRight = parseInt(computed.right);
     if(!currentRight){
         currentRight = 0;
     }
-    if(currentWidth >= maxWidth){
-        currentWidth += currentWidth;
-        ingridientsItem.style.right = currentWidth + "px";
-        console.log(ingridientsItem.style.right);
+    if(currentRight < 2652){
+        ingridientsItem.style.right = currentRight + 784 + 100 + "px";
     }
 });
 left.addEventListener("click", function(e){
     e.preventDefault();
+    let currentRight = parseInt(computed.right);
     if(!currentRight){
         currentRight = 0;
     }
-    if(currentWidth > maxWidth){
-        currentWidth -= currentWidth;
-        ingridientsItem.style.right = currentWidth + "px";
-        console.log(ingridientsItem.style.right);
+    if(currentRight > 0){
+        ingridientsItem.style.right = currentRight - 784 - 100 + "px";
     }
 });
 
