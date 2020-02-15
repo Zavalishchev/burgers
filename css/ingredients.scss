@@ -18,6 +18,7 @@
 .ingridients__arrowlink {
     display: flex;
     transform: rotate(90deg);
+    z-index: 10;
 }    
 .left {
     transform: rotate(-90deg);
@@ -26,23 +27,30 @@
     display: flex;
     position: relative;
 }
-.ingridients__main {
+.ingridients__slider {
     display: flex;
     position: relative;
+    width: 784px;
     flex-direction: row;
     max-width: 80%;
-    
+    z-index: 1;
 }    
-.ingridients__main-item {
+.ingridients__slider-items {
     display: flex;
-    box-sizing: border-box;
+    position: relative;
     width: 100%;
-    height: 100%;
-    transition: 3s;
+    z-index: 1;
 
     @include phones {
         flex-direction: column;
     }
+}
+.ingridients__slider-item {
+    display: flex;
+    position: relative;
+    margin-right: 50px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .ingridients__main-pictures {
@@ -56,8 +64,8 @@
     flex-direction: column;
 }
 .main__pictures-img {
-    width: 100%;
-    height: 100%;
+    //width: 100%;
+    //height: 100%;
 }
 .main__pictures-txt {
     color: #ffffff;
@@ -71,8 +79,9 @@
     display: flex;
 }
 .ingridients__main-burger-img {
+    display: flex;
     width: 100%;
-    height: 100%;
+    //height: 100%;
 }
 .ingridients__main-kkal {
     display: flex;
