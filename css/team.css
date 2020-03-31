@@ -1,5 +1,6 @@
 .team {
   display: flex;
+  position: relative;
   width: 100%;
   height: 100vh;
   background-image: url("../img/backg_team.png");
@@ -7,8 +8,9 @@
   background-size: cover; }
 
 .team__container {
-  display: block;
+  display: flex;
   position: absolute;
+  justify-content: right;
   right: 0;
   width: 50%;
   height: 100%;

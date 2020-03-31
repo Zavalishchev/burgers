@@ -1,43 +1,38 @@
 .pagination {
-  display: flex;
   position: fixed;
-  right: 20px;
-  top: 90px;
-  z-index: 10; }
-  @media screen and (max-width: 768px) {
-    .pagination {
-      display: none; } }
+  top: 10px;
+  right: 10%; }
 
-.pagination-list {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  flex-direction: column; }
+.pagination__item {
+  margin-bottom: 10px; }
 
-.pagination-item {
-  display: block;
-  margin-bottom: 15px;
-  width: 16px;
-  height: 16px; }
-  .pagination-item:last-child {
-    margin: 0; }
+.pagination__item:last-child {
+  margin-bottom: 0; }
 
-.pagination-block {
-  border: 1px #ffffff solid;
-  border-radius: 4px;
-  width: 6px;
-  height: 6px;
-  background-color: #ffffff;
-  margin-left: 4px;
-  margin-top: 4px; }
+.pagination__item.is-active .pagination__link {
+  border-color: #fff; }
 
-.pagination-link {
-  display: block;
-  width: 7px;
-  height: 7px; }
+.pagination__link {
+  display: inline-block;
+  height: 14px;
+  width: 14px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  position: relative; }
 
-.pagination-active {
-  border: 1px #ffffff solid;
-  border-radius: 9px; }
+.pagination__link:hover {
+  border-color: #fff; }
+
+.pagination__link:before {
+  content: '';
+  display: inline-block;
+  height: 5px;
+  width: 5px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
 
 /*# sourceMappingURL=pagination.css.map */

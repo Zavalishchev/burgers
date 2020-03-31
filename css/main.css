@@ -85,10 +85,19 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 25px; }
 
 .wrapper {
-  position: relative;
-  min-height: 100%;
+  height: 100%;
   width: 100%;
   overflow: hidden; }
+
+.main-content {
+  height: 100%;
+  transition: transform 1s, -webkit-transform 1s; }
+
+.section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
 
 a {
   text-decoration: none; }
@@ -96,9 +105,9 @@ a {
 .intro {
   display: flex;
   width: 100%;
+  height: 100vh;
   margin: 0;
   flex-direction: column;
-  height: 100vh;
   justify-content: space-between;
   background-image: url("../img/background_1.png");
   background-repeat: no-repeat;
@@ -106,6 +115,7 @@ a {
 
 .intro__container {
   display: flex;
+  width: 100%;
   justify-content: space-around;
   padding-top: 0.75rem;
   flex-direction: row; }
@@ -285,46 +295,41 @@ a {
     bottom: 0; }
 
 .pagination {
-  display: flex;
   position: fixed;
-  right: 20px;
-  top: 90px;
-  z-index: 10; }
-  @media screen and (max-width: 768px) {
-    .pagination {
-      display: none; } }
+  top: 10px;
+  right: 10%; }
 
-.pagination-list {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  flex-direction: column; }
+.pagination__item {
+  margin-bottom: 10px; }
 
-.pagination-item {
-  display: block;
-  margin-bottom: 15px;
-  width: 16px;
-  height: 16px; }
-  .pagination-item:last-child {
-    margin: 0; }
+.pagination__item:last-child {
+  margin-bottom: 0; }
 
-.pagination-block {
-  border: 1px #ffffff solid;
-  border-radius: 4px;
-  width: 6px;
-  height: 6px;
-  background-color: #ffffff;
-  margin-left: 4px;
-  margin-top: 4px; }
+.pagination__item.is-active .pagination__link {
+  border-color: #fff; }
 
-.pagination-link {
-  display: block;
-  width: 7px;
-  height: 7px; }
+.pagination__link {
+  display: inline-block;
+  height: 14px;
+  width: 14px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  position: relative; }
 
-.pagination-active {
-  border: 1px #ffffff solid;
-  border-radius: 9px; }
+.pagination__link:hover {
+  border-color: #fff; }
+
+.pagination__link:before {
+  content: '';
+  display: inline-block;
+  height: 5px;
+  width: 5px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
 
 .bestpage {
   display: flex;
@@ -337,6 +342,7 @@ a {
 
 .bestpage__container {
   display: flex;
+  width: 100%;
   vertical-align: middle;
   justify-content: center;
   align-items: center; }
@@ -417,14 +423,17 @@ a {
 .ingredients {
   display: flex;
   position: relative;
+  width: 100%;
+  height: 100vh;
   background-image: url("../img/background_3.png");
   background-repeat: no-repeat;
   background-size: cover; }
 
 .ingredients__container {
   display: flex;
-  height: 100vh;
+  position: relative;
   width: 100%;
+  height: 100%;
   flex-direction: row;
   align-items: center;
   justify-content: space-around; }
@@ -579,6 +588,7 @@ a {
 
 .team {
   display: flex;
+  position: relative;
   width: 100%;
   height: 100vh;
   background-image: url("../img/backg_team.png");
@@ -586,8 +596,9 @@ a {
   background-size: cover; }
 
 .team__container {
-  display: block;
+  display: flex;
   position: absolute;
+  justify-content: right;
   right: 0;
   width: 50%;
   height: 100%;
@@ -711,7 +722,7 @@ a {
 
 .menupage__title {
   display: flex;
-  position: relative;
+  position: absolute;
   top: 5%;
   left: 5%; }
   @media screen and (max-width: 768px) {

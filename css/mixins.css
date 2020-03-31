@@ -65,10 +65,19 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 25px; }
 
 .wrapper {
-  position: relative;
-  min-height: 100%;
+  height: 100%;
   width: 100%;
   overflow: hidden; }
+
+.main-content {
+  height: 100%;
+  transition: transform 1s, -webkit-transform 1s; }
+
+.section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
 
 a {
   text-decoration: none; }

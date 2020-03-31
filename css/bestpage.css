@@ -9,6 +9,7 @@
 
 .bestpage__container {
   display: flex;
+  width: 100%;
   vertical-align: middle;
   justify-content: center;
   align-items: center; }
