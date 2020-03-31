@@ -106,3 +106,25 @@ teamAccord.addEventListener("click", function(event){
                 newElement.innerHTML = content;
                 return overlayElement;
             }
+
+
+//one page scroll
+let onePageScroll = () => {
+    const content = document.querySelector('.main-content');
+    const pages = content.querySelectorAll('.section');
+    const points = document.querySelectorAll('.pagination__item');
+    const dataScrollTo = document.querySelectorAll('[data-scroll-to]');
+    let inScroll = false;
+
+    doTransform(2);
+
+    function doTransform(numPage){
+        const position = `${numPage * (-100)}vh`;
+        console.log(position);
+        content.style.transform = `translateY(${position})`;
+    }
+    
+    
+}
+
+onePageScroll()
