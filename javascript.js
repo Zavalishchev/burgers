@@ -116,14 +116,88 @@ let onePageScroll = () => {
     const dataScrollTo = document.querySelectorAll('[data-scroll-to]');
     let inScroll = false;
 
-    doTransform(2);
+    pointNav();
+    wheel();
+    keyPush();
 
     function doTransform(numPage){
-        const position = `${numPage * (-100)}vh`;
-        console.log(position);
+        const position = `${numPage * (-100)}%`;
+
+        if(inScroll)return;
+        inScroll = true;
+
+        addClass(pages);
+
+        setTimeout(()=> {
+            addClass(points);
+            inScroll = false;
+        }, 1000);
+        
         content.style.transform = `translateY(${position})`;
+
+        function addClass(arr){
+            arr[numPage].classList.add('is-active');
+            for(const item of arr){
+                if(item != arr[numPage]){
+                    item.classList.remove('is-active');
+                }
+            }
+        }
     }
     
+    function pointNav(){
+        for(const point of dataScrollTo){
+            point.addEventListener('click', e=> {
+                doTransform(point.dataset.scrollTo);
+            })
+        }
+    }
+
+    function wheel(){
+        document.addEventListener('wheel', e=>{
+            let direct = e.deltaY > 0 ? 'up' : 'down';
+            scrollToPage(direct);
+        })
+    }
+
+    function keyPush(){
+        document.addEventListener('keydown', e=> {
+            switch(e.keyCode){
+                case 38:
+                    scrollToPage('down');
+                    break;
+                case 40:
+                    scrollToPage('up');
+                    break;
+                default:
+                    break;
+            }
+        })
+    }
+
+    function definePage(arr){
+        for(let i = 0; i < arr.length; i++){
+            if(arr[i].classList.contains('is-active')){
+                return {
+                    activeIndex: i,
+                    prevIndex: arr[i].previousElementSibling,
+                    nextIndex: arr[i].nextElementSibling
+                }
+            }
+        }
+    }
+
+    function scrollToPage(direction){
+        const page = definePage(pages);
+        if(direction === 'up' && page.nextIndex){
+            let pageNumber = page.activeIndex + 1;
+            doTransform(pageNumber);
+        }
+        if(direction === 'down' && page.prevIndex){
+            let pageNumber = page.activeIndex - 1;
+            doTransform(pageNumber);
+        }
+    }
     
 }
 
