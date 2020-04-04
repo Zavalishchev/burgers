@@ -115,11 +115,9 @@ let onePageScroll = () => {
     const points = document.querySelectorAll('.pagination__item');
     const dataScrollTo = document.querySelectorAll('[data-scroll-to]');
     let inScroll = false;
-
     pointNav();
     wheel();
     keyPush();
-
     function doTransform(numPage){
         const position = `${numPage * (-100)}%`;
 
@@ -144,7 +142,6 @@ let onePageScroll = () => {
             }
         }
     }
-    
     function pointNav(){
         for(const point of dataScrollTo){
             point.addEventListener('click', e=> {
@@ -152,14 +149,12 @@ let onePageScroll = () => {
             })
         }
     }
-
     function wheel(){
         document.addEventListener('wheel', e=>{
             let direct = e.deltaY > 0 ? 'up' : 'down';
             scrollToPage(direct);
         })
     }
-
     function keyPush(){
         document.addEventListener('keydown', e=> {
             switch(e.keyCode){
@@ -174,7 +169,6 @@ let onePageScroll = () => {
             }
         })
     }
-
     function definePage(arr){
         for(let i = 0; i < arr.length; i++){
             if(arr[i].classList.contains('is-active')){
@@ -186,7 +180,6 @@ let onePageScroll = () => {
             }
         }
     }
-
     function scrollToPage(direction){
         const page = definePage(pages);
         if(direction === 'up' && page.nextIndex){
@@ -198,7 +191,29 @@ let onePageScroll = () => {
             doTransform(pageNumber);
         }
     }
-    
+}
+onePageScroll()
+//one page scroll
+
+//hamburger menu:
+let burger = document.querySelector('.burger');
+let overlay = document.querySelector('.burg__overlay');
+let body = document.querySelector('.body');
+let links = document.querySelectorAll('.overlay-menu-link');
+
+links.forEach(function(el){
+    el.addEventListener('click', toggleBurg);
+})
+
+function toggleBurg(){
+    burger.classList.toggle('burger--active');
+    overlay.classList.toggle('overlay--active');
+    body.classList.toggle('body--active--menu');
 }
 
-onePageScroll()
+burger.addEventListener('click', toggleBurg);
+
+
+
+
+
