@@ -270,30 +270,81 @@ a {
   width: 1.8125rem;
   height: 0.875rem; }
 
-.hamburger {
-  top: 0.375rem;
+.burger {
   position: fixed;
-  right: 1.875rem;
-  top: 1.875rem;
-  height: 1.375rem;
-  align-items: center;
+  top: 20px;
+  right: 3%;
+  height: 25px;
+  width: 40px;
+  cursor: pointer;
+  z-index: 15;
+  transition: all .4s;
   display: none; }
   @media screen and (max-width: 768px) {
-    .hamburger {
+    .burger {
       display: inline-flex; } }
-  .hamburger .hamburger__menu, .hamburger .hamburger__menu:before, .hamburger .hamburger__menu:after {
-    background: #fff;
-    width: 1.5rem;
-    height: 0.3125rem;
-    border-radius: 0.1875rem; }
-  .hamburger .hamburger__menu:before, .hamburger .hamburger__menu:after {
-    content: "";
-    display: block;
-    position: absolute; }
-  .hamburger .hamburger__menu:before {
-    top: 0; }
-  .hamburger .hamburger__menu:after {
-    bottom: 0; }
+  .burger__line {
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    transition: all .4s; }
+    .burger__line:nth-child(2) {
+      top: 50%;
+      transform: translateY(-50%); }
+    .burger__line:nth-child(3) {
+      bottom: 0;
+      top: initial; }
+
+.burg__overlay {
+  display: flex;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 100%;
+  background-color: black;
+  align-items: center;
+  justify-content: center;
+  transition: all .4s;
+  opacity: 0;
+  z-index: 10; }
+
+.overlay__menu-item {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .overlay__menu-item:after {
+    content: '';
+    display: inline-block;
+    height: 5px;
+    width: 5px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-top: 10px; }
+  .overlay__menu-item:last-child {
+    margin-bottom: 0; }
+    .overlay__menu-item:last-child:after {
+      display: none; }
+.overlay__menu-link:hover {
+  opacity: .7; }
+
+.burger--active .burger__line:nth-child(1) {
+  opacity: 0; }
+.burger--active .burger__line:nth-child(2) {
+  transform: rotate(45deg); }
+.burger--active .burger__line:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px) translateX(6px); }
+
+.overlay--active {
+  left: 0;
+  opacity: 1; }
+
+.body--active-menu {
+  overflow: hidden; }
 
 .pagination {
   position: fixed;
