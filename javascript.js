@@ -74,38 +74,40 @@ teamAccord.addEventListener("click", function(event){
             });
 
 
-            //js для секции: feedback
-            const openButton = document.querySelectorAll("#openOverlay");
-            const sectionInner = document.querySelector(".feedback");
-            const buttonLenght = document.getElementsByClassName("feedback_button").length;
-            const successOverlay = createOverlay("Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.");
 
-            for(var i = 0; i < buttonLenght; i++){
-                openButton[i].addEventListener('click', function(e){
-                e.preventDefault();
-                sectionInner.appendChild(successOverlay); 
-                });
-            }
 
-            function createOverlay(content){
-                const overlayElement = document.createElement("div");
-                overlayElement.classList.add("overlay");
-                const templateOverlay = document.querySelector("#overlayTemplate");
-                overlayElement.innerHTML = templateOverlay.innerHTML;
-                const closeOverlay = overlayElement.querySelector(".closeOverlay");
-                overlayElement.addEventListener("click", function(e){
-                    if(e.target === overlayElement){
-                        sectionInner.removeChild(overlayElement);
-                    }
-                });
-                closeOverlay.addEventListener('click', function(e){
-                    e.preventDefault();
-                    sectionInner.removeChild(overlayElement);
-                });
-                const newElement = overlayElement.querySelector(".contentOverlay");
-                newElement.innerHTML = content;
-                return overlayElement;
-            }
+//js для секции: feedback
+function feedPopup() {
+    const feedList = document.querySelector('.feedback__list');
+    feedList.addEventListener('click', function(e) {
+        if(e.target.classList.contains('button')){
+
+            const grayFeed = document.querySelector('.feed__back').style;
+            console.log(grayFeed);
+
+            const title = e.target.parentNode.querySelector('.feedback__title').textContent;
+            const text = e.target.parentNode.querySelector('.feedback__text').textContent;
+            renderPopup(title, text);
+        }
+    })
+    function renderPopup(title, text){
+        const popup = document.querySelector('.popup');
+
+        popup.classList.add('popup--active');
+
+        popup.querySelector('.popup__title').textContent = title;
+        popup.querySelector('.popup__text').textContent = text;
+
+        popup.querySelector('.popup__close').addEventListener('click', e=> {
+            e.preventDefault();
+            popup.classList.remove('popup--active');
+        })
+    }
+}
+feedPopup();
+//js для секции: feedback
+
+
 
 
 //one page scroll
@@ -204,15 +206,13 @@ let links = document.querySelectorAll('.overlay-menu-link');
 links.forEach(function(el){
     el.addEventListener('click', toggleBurg);
 })
-
 function toggleBurg(){
     burger.classList.toggle('burger--active');
     overlay.classList.toggle('overlay--active');
-    body.classList.toggle('body--active--menu');
+    //body.classList.toggle('body--active-menu');
 }
-
 burger.addEventListener('click', toggleBurg);
-
+//hamburger menu:
 
 
 
