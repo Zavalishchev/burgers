@@ -1,30 +1,54 @@
 
 // js для секции: ingridients
-const left = document.querySelector("#left");
-const right = document.querySelector("#right");
-const ingridientsItem = document.querySelector(".ingridients__slider-items");
-const computed = getComputedStyle(ingridientsItem);
+let listIngr = document.querySelector('.ingridients__slider-list');
+let contIngrWidth = document.querySelector('.ingridients__slider').clientWidth;
+let actionIngr = document.querySelector('.ingridients__pages');
+var posIngr = 0;
 
-right.addEventListener("click", function(e){
-    e.preventDefault();
-    let currentRight = parseInt(computed.right);
-    if(!currentRight){
-        currentRight = 0;
+function calcIngrWidth(){
+    const counterIngr = listIngr.children.length;
+    const oneIngrWidth = counterIngr * contIngrWidth;
+    listIngr.style.width = `${oneIngrWidth}px`;
+}
+function handlerClick(elem){
+    if(elem.target.tagName === 'IMG'){
+        slide(elem.target);
     }
-    if(currentRight < 2652){
-        ingridientsItem.style.right = currentRight + 784 + 100 + "px";
+}
+function slide(vector){
+    const vectorIngr = vector.dataset.vector;
+    if(vectorIngr === 'next'){
+        slideTo(vectorIngr);
+    } else {
+        slideTo(vectorIngr);
     }
-});
-left.addEventListener("click", function(e){
-    e.preventDefault();
-    let currentRight = parseInt(computed.right);
-    if(!currentRight){
-        currentRight = 0;
+}
+function slideTo(vectorDirection){
+    const activIngr = listIngr.querySelector('.vision');
+    if(vectorDirection === 'next'){
+        var nextIngrid = activIngr.nextElementSibling;
+    } else {
+        var prevIngrid = activIngr.previousElementSibling;
     }
-    if(currentRight > 0){
-        ingridientsItem.style.right = currentRight - 784 - 100 + "px";
+    if(nextIngrid){
+        posIngr -= contIngrWidth;
+        activIngr.classList.remove('vision');
+        nextIngrid.classList.add('vision');
+        transf(posIngr);
+    } else if(prevIngrid) {
+        posIngr += contIngrWidth;
+        activIngr.classList.remove('vision');
+        prevIngrid.classList.add('vision');
+        transf(posIngr);
     }
-});
+}
+function transf(pos){
+    listIngr.style.transform = `translateX(${pos}px)`;
+}
+
+window.addEventListener('load', calcIngrWidth);
+actionIngr.addEventListener('click', handlerClick);
+// js для секции: ingridients
 
 
 //js для секции: team
@@ -56,13 +80,13 @@ teamAccord.addEventListener("click", function(event){
             }
         }
     });
+//js для секции: team
 
 
-            //js для секции: menupage
-            const menupageElement = document.querySelector("#menupage__accordeon");
-            let lastActive;
-
-            menupageElement.addEventListener("click", function(e){
+//js для секции: menupage
+const menupageElement = document.querySelector("#menupage__accordeon");
+let lastActive;
+menupageElement.addEventListener("click", function(e){
                 e.preventDefault();
                 if(e.target.classList.contains("menupage__accordeon-item") || e.target.classList.contains("menupage__accordeon-link") || e.target.classList.contains("menupage__accordeon-link-text")){
                     if(lastActive){
@@ -71,9 +95,8 @@ teamAccord.addEventListener("click", function(event){
                     lastActive = e.target.parentNode;
                     lastActive.classList.add("active");
                     }
-            });
-
-
+});
+//js для секции: menupage
 
 
 //js для секции: feedback
@@ -106,8 +129,6 @@ function feedPopup() {
 }
 feedPopup();
 //js для секции: feedback
-
-
 
 
 //one page scroll
