@@ -12,49 +12,58 @@
 .ingredients__container {
     display: flex;
     position: relative;
-    width: 100%;
+    max-width: 940px;
     height: 100%;
+    margin: 0 auto;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-}
-.ingridients__arrowlink {
-    display: flex;
-    transform: rotate(90deg);
-    z-index: 10;
-}    
-.left {
-    transform: rotate(-90deg);
-}
-.ingridients__arrow-img {
-    display: flex;
-    position: relative;
-}
+}   
 .ingridients__slider {
-    display: flex;
-    position: relative;
-    width: 784px;
-    flex-direction: row;
-    max-width: 80%;
-    z-index: 1;
-}    
-.ingridients__slider-items {
-    display: flex;
-    position: relative;
     width: 100%;
-    z-index: 1;
-
-    @include phones {
-        flex-direction: column;
-    }
+    position: relative;
+}
+.ingridients__wrapp {
+    overflow: hidden;
+}
+.ingridients__slider-list {
+    height: 700px;
+    position: relative;
+    display: flex;
+    right: 0;
+    transition: all 1s;
 }
 .ingridients__slider-item {
-    display: flex;
     position: relative;
-    margin-right: 50px;
-    width: 100%;
-    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    flex: 1;
+    transition: all 1s;
 }
+
+.ingridients__pages {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+}
+.left {
+    transform: rotate(90deg);
+}
+.right {
+    transform: rotate(-90deg);
+}
+
+
+
+
+
+
 
 .ingridients__main-pictures {
     display: flex;

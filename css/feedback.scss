@@ -49,6 +49,8 @@
     left: 0;
     width: 100%;
     height: 100%;
+    background: grey;
+    opacity: .5;
 
     &-one {
         background: url(../img/fdbck__person1.png) no-repeat;
@@ -89,10 +91,8 @@
         background: url(../img/fdbck__person8.png) no-repeat;
         background-size: cover;
         background-position: center;
-    }
+    }   
 }
-
-
 
 .feedback__info {
     visibility: visible;
@@ -105,8 +105,12 @@
     height: 100%;
     width: 100%;
     background: rgba(80, 80, 80, .7);
+
+    &:hover {
+        background: rgba(80, 80, 80, 0);
+    }
 }
-                
+         
 .feedback__title {
     color: #ffffff;
     font-family: 'gagalin';

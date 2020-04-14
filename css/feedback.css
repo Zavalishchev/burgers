@@ -41,7 +41,9 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  background: grey;
+  opacity: .5; }
   .feed__back-one {
     background: url(../img/fdbck__person1.png) no-repeat;
     background-size: cover;
@@ -86,6 +88,8 @@
   height: 100%;
   width: 100%;
   background: rgba(80, 80, 80, 0.7); }
+  .feedback__info:hover {
+    background: rgba(80, 80, 80, 0); }
 
 .feedback__title {
   color: #ffffff;
