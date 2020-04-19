@@ -57,8 +57,12 @@
     margin-bottom: 0; }
     .overlay__menu-item:last-child:after {
       display: none; }
-.overlay__menu-link:hover {
-  opacity: .7; }
+
+.overlay-menu-link {
+  color: #fff;
+  font-size: 1.25rem; }
+  .overlay-menu-link:hover {
+    color: red; }
 
 .burger--active .burger__line:nth-child(1) {
   opacity: 0; }

@@ -75,10 +75,13 @@
             }
         }
     }
-    &-link {
-        &:hover {
-            opacity: .7;
-        }
+}
+.overlay-menu-link {
+    color: #fff;
+    font-size: rem(20px);
+
+    &:hover {
+        color: red;
     }
 }
 

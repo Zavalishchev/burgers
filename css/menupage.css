@@ -2,7 +2,7 @@
   display: flex;
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-image: url("../img/background_menu.png");
   background-repeat: no-repeat;
   background-size: cover; }
@@ -47,19 +47,18 @@
   flex-direction: row;
   transition: 3s; }
 
-.active .menupage__accordeon-link-text {
+.menus__item--active .menupage__accordeon-link-text {
   color: #f9b43b; }
-
-.active .menupage__accordeon-content {
+.menus__item--active .menupage__accordeon-content {
   width: 33.75rem;
   background: #363636;
   opacity: .9;
   transition: .5s; }
   @media screen and (max-width: 768px) {
-    .active .menupage__accordeon-content {
+    .menus__item--active .menupage__accordeon-content {
       width: 18.75rem; } }
   @media screen and (max-width: 480px) {
-    .active .menupage__accordeon-content {
+    .menus__item--active .menupage__accordeon-content {
       width: 9.375rem; } }
 
 .menupage__accordeon-link {

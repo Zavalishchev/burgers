@@ -32,13 +32,24 @@
   transition: all 1s; }
 
 .ingridients__slider-item {
-  position: relative;
   display: flex;
+  position: relative;
+  margin: 0 10px;
+  width: 100%;
   align-items: center;
   justify-content: center;
-  margin: 10px;
-  flex: 1;
   transition: all 1s; }
+  @media screen and (max-width: 768px) {
+    .ingridients__slider-item {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      padding: 0; } }
+  @media screen and (max-width: 480px) {
+    .ingridients__slider-item {
+      flex-direction: row;
+      font-size: 1.25rem; } }
 
 .ingridients__pages {
   position: absolute;
@@ -55,15 +66,34 @@
 .right {
   transform: rotate(-90deg); }
 
+.ingrid_wrappp {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+  @media screen and (max-width: 768px) {
+    .ingrid_wrappp {
+      flex-direction: column;
+      font-size: 0.625rem;
+      margin: 0; } }
+  @media screen and (max-width: 480px) {
+    .ingrid_wrappp {
+      font-size: 0.3125rem; } }
+
 .ingridients__main-pictures {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  justify-content: center; }
 
 .main__pictures-link {
   display: flex;
   position: absolute;
   top: 0;
+  left: 10%;
   flex-direction: column; }
+  @media screen and (max-width: 480px) {
+    .main__pictures-link {
+      display: none; } }
 
 .main__pictures-txt {
   color: #ffffff;
@@ -75,6 +105,12 @@
 
 .ingridients__main-burger {
   display: flex; }
+  @media screen and (max-width: 768px) {
+    .ingridients__main-burger {
+      max-width: 75%; } }
+  @media screen and (max-width: 480px) {
+    .ingridients__main-burger {
+      max-width: 50%; } }
 
 .ingridients__main-burger-img {
   display: flex;
@@ -84,6 +120,7 @@
   display: flex;
   position: absolute;
   bottom: 0;
+  left: 10%;
   flex-direction: column; }
   @media screen and (max-width: 480px) {
     .ingridients__main-kkal {
@@ -91,7 +128,9 @@
 
 .main__kkal-img {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  bottom: 0;
+  left: 0; }
 
 .opacity_mod {
   opacity: 0.6; }
@@ -102,7 +141,8 @@
   max-width: 50%; }
   @media screen and (max-width: 480px) {
     .ingridients__main-description {
-      max-width: 100%; } }
+      max-width: 50%;
+      font-size: 0.625rem; } }
 
 .ingridients__main-description-title {
   display: flex;
@@ -112,6 +152,9 @@
   font-size: 4.5rem;
   font-weight: 400;
   text-transform: uppercase; }
+  @media screen and (max-width: 480px) {
+    .ingridients__main-description-title {
+      font-size: 3.125rem; } }
 
 .ingridients__main-description-txt {
   display: flex;
