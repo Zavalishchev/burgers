@@ -4,7 +4,6 @@ let listIngr = document.querySelector('.ingridients__slider-list');
 let contIngrWidth = document.querySelector('.ingridients__slider').clientWidth;
 let actionIngr = document.querySelector('.ingridients__pages');
 var posIngr = 0;
-
 function calcIngrWidth(){
     const counterIngr = listIngr.children.length;
     const oneIngrWidth = counterIngr * contIngrWidth;
@@ -45,7 +44,6 @@ function slideTo(vectorDirection){
 function transf(pos){
     listIngr.style.transform = `translateX(${pos}px)`;
 }
-
 window.addEventListener('load', calcIngrWidth);
 actionIngr.addEventListener('click', handlerClick);
 // js для секции: ingridients
@@ -54,7 +52,6 @@ actionIngr.addEventListener('click', handlerClick);
 //js для секции: team
 const workers = document.querySelectorAll(".accordeon__item");
 const teamAccord = document.querySelector(".accordeon");
-
 teamAccord.addEventListener("click", function(event){
     event.preventDefault();
     const target = event.target;
@@ -84,18 +81,66 @@ teamAccord.addEventListener("click", function(event){
 
 
 //js для секции: menupage
-const menupageElement = document.querySelector("#menupage__accordeon");
-let lastActive;
-menupageElement.addEventListener("click", function(e){
-                e.preventDefault();
-                if(e.target.classList.contains("menupage__accordeon-item") || e.target.classList.contains("menupage__accordeon-link") || e.target.classList.contains("menupage__accordeon-link-text")){
-                    if(lastActive){
-                        lastActive.classList.remove("active");
+function accordionMenu() {
+    const menuItems = document.querySelectorAll('.menupage__accordeon-item');
+    const menuAccord = document.querySelector('.menupage__accordeon');
+
+    menuAccord.addEventListener('click', event => {
+        let target = event.target.parentNode;
+        let content = target.nextElementSibling;
+        let item = target.parentNode;
+        const tarWidth = target.clientWidth;
+        const windowWidth = document.documentElement.clientWidth; // ширина окна браузера
+        const layoutContentWidth = 520; // ширина контента
+        const breakPointPhone = 480; // точка, меньше которой меняется поведение слайдера
+        const closeMenuWidth = tarWidth * menuItems.length;
+        const openMenuWidth = closeMenuWidth + layoutContentWidth;
+
+        if(event.target.classList.contains('menupage__accordeon-link-text')) {
+            moveMenu();
+        }
+        target = event.target;
+        content = target.nextElementSibling;
+        item = target.parentNode;
+
+        if(target.classList.contains('menupage__accordeon-link')) {
+            moveMenu();
+        }
+
+        function moveMenu(){
+            for(const iterator of menuItems) {
+                if(iterator != item) {
+                    iterator.classList.remove('menus__item--active');
+                    iterator.lastElementChild.style.width = 0;
+                    menuAccord.style.transform = `translateX(0)`;
+                }
+            }
+            if(item.classList.contains('menus__item--active')) {
+                item.classList.remove('menus__item--active');
+                content.style.width = 0;
+            } else {
+                item.classList.add('menus__item--active');
+                
+                if(windowWidth > breakPointPhone && windowWidth < openMenuWidth) {
+                    content.style.width = windowWidth - closeMenuWidth + 'px';
+                } else if(windowWidth <= breakPointPhone) {
+                    let num;
+                    for(let i = 0; i < menuItems.length; i++){
+                        if(menuItems[i] === item) {
+                            num = menuItems.length - (i + 1);
+                            console.log(num);
+                        }
                     }
-                    lastActive = e.target.parentNode;
-                    lastActive.classList.add("active");
-                    }
-});
+                    menuAccord.style.transform = `translateX(${tarWidth * num}px)`;
+                    content.style.width = windowWidth - tarWidth + 'px';
+                } else {
+                    content.style.width = 520 + 'px';
+                }
+            }
+        }
+    });
+}
+accordionMenu();
 //js для секции: menupage
 
 
